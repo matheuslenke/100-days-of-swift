@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="76h-cX-E2z">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,35 +13,44 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vAV-tf-8Lp">
-                                <rect key="frame" x="118" y="54" width="660" height="100"/>
+                                <rect key="frame" x="107" y="98" width="200" height="360"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXd-Gx-xgf">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="2Lq-Qs-Ife"/>
-                                            <constraint firstAttribute="height" constant="100" id="Dtm-iW-OOp"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="us"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ2-9K-ZGa">
-                                        <rect key="frame" x="230" y="0.0" width="200" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Ay6-Ye-Dpp"/>
                                             <constraint firstAttribute="height" constant="100" id="qJu-oP-QNp"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="us"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fiX-on-j4o"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc6-SY-PSQ">
-                                        <rect key="frame" x="460" y="0.0" width="200" height="100"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXd-Gx-xgf">
+                                        <rect key="frame" x="0.0" y="130" width="200" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="2Lq-Qs-Ife"/>
+                                            <constraint firstAttribute="height" constant="100" id="Dtm-iW-OOp"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="us"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycG-HV-Ejc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc6-SY-PSQ">
+                                        <rect key="frame" x="0.0" y="260" width="200" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="AhF-Sr-gYF"/>
                                             <constraint firstAttribute="width" constant="200" id="Igi-yn-bav"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="us"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3MT-IN-DFZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
@@ -71,7 +80,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="76h-cX-E2z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xEt-nW-7M1">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
