@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vAV-tf-8Lp">
-                                <rect key="frame" x="107" y="98" width="200" height="360"/>
+                                <rect key="frame" x="107" y="98" width="200" height="490"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ2-9K-ZGa">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
@@ -52,6 +52,12 @@
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3MT-IN-DFZ"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFc-TJ-Ies">
+                                        <rect key="frame" x="0.0" y="390" width="200" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
@@ -68,6 +74,7 @@
                         <outlet property="button1" destination="iZ2-9K-ZGa" id="Baa-Oh-qeg"/>
                         <outlet property="button2" destination="AXd-Gx-xgf" id="FIK-f8-KR6"/>
                         <outlet property="button3" destination="nc6-SY-PSQ" id="u44-Uk-8ye"/>
+                        <outlet property="scoreLabel" destination="EFc-TJ-Ies" id="cHO-KS-q0E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
