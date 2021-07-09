@@ -8,10 +8,10 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKNavigationDelegate {
+class SiteViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     var progressView: UIProgressView!
-    var websites = ["apple.com", "hackingwithswift.com"]
+    var websites: [String]?
     
     override func loadView() {
         webView = WKWebView()
@@ -27,12 +27,16 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let refresh =
             UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
+        let backButton =
+            UIBarButtonItem(barButtonSystemItem: .rewind, target: webView, action: #selector(webView.goBack))
+        let forwardButton =
+            UIBarButtonItem(barButtonSystemItem: .fastForward, target: webView, action: #selector(webView.goForward))
         
         progressView = UIProgressView(progressViewStyle: .default)
         progressView.sizeToFit()
         let progressButton = UIBarButtonItem(customView: progressView)
         
-        toolbarItems = [progressButton, spacer, refresh]
+        toolbarItems = [backButton, forwardButton,spacer , progressButton, spacer, refresh]
         navigationController?.isToolbarHidden = false
         
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
@@ -56,7 +60,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
     func openPage(action: UIAlertAction) {
         guard let actionTitle = action.title else { return }
         guard let url = URL(string: "https://" + actionTitle) else { return }
+        
         webView.load(URLRequest(url: url))
+
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
@@ -81,8 +87,19 @@ class ViewController: UIViewController, WKNavigationDelegate {
                 }
             }
         }
-        
+
         decisionHandler(.cancel)
+        alertBlockedLink(toUrl: url!.absoluteString)
+    }
+    
+    func alertBlockedLink(toUrl url: String) {
+        let ac = UIAlertController(
+            title: "Error",
+            message: "This isn't a valid url, please provide a valid one",
+            preferredStyle: .alert
+        )
+        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+        self.present(ac, animated: true)
     }
 
 }
