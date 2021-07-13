@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F86894B82688B15700A1825D /* ReviewProject1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewProject1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F86894B82688B15700A1825D /* ReviewProject1-FlagViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReviewProject1-FlagViewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86894BB2688B15700A1825D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F86894BD2688B15700A1825D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F86894BF2688B15700A1825D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		F86894B92688B15700A1825D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F86894B82688B15700A1825D /* ReviewProject1.app */,
+				F86894B82688B15700A1825D /* ReviewProject1-FlagViewer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,9 +125,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F86894B72688B15700A1825D /* ReviewProject1 */ = {
+		F86894B72688B15700A1825D /* ReviewProject1-FlagViewer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F86894CC2688B15C00A1825D /* Build configuration list for PBXNativeTarget "ReviewProject1" */;
+			buildConfigurationList = F86894CC2688B15C00A1825D /* Build configuration list for PBXNativeTarget "ReviewProject1-FlagViewer" */;
 			buildPhases = (
 				F86894B42688B15700A1825D /* Sources */,
 				F86894B52688B15700A1825D /* Frameworks */,
@@ -137,9 +137,9 @@
 			);
 			dependencies = (
 			);
-			name = ReviewProject1;
+			name = "ReviewProject1-FlagViewer";
 			productName = ReviewProject1;
-			productReference = F86894B82688B15700A1825D /* ReviewProject1.app */;
+			productReference = F86894B82688B15700A1825D /* ReviewProject1-FlagViewer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +159,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F86894B32688B15700A1825D /* Build configuration list for PBXProject "ReviewProject1" */;
+			buildConfigurationList = F86894B32688B15700A1825D /* Build configuration list for PBXProject "ReviewProject1-FlagViewer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -172,7 +172,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F86894B72688B15700A1825D /* ReviewProject1 */,
+				F86894B72688B15700A1825D /* ReviewProject1-FlagViewer */,
 			);
 		};
 /* End PBXProject section */
@@ -393,7 +393,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F86894B32688B15700A1825D /* Build configuration list for PBXProject "ReviewProject1" */ = {
+		F86894B32688B15700A1825D /* Build configuration list for PBXProject "ReviewProject1-FlagViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F86894CA2688B15C00A1825D /* Debug */,
@@ -402,7 +402,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F86894CC2688B15C00A1825D /* Build configuration list for PBXNativeTarget "ReviewProject1" */ = {
+		F86894CC2688B15C00A1825D /* Build configuration list for PBXNativeTarget "ReviewProject1-FlagViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F86894CD2688B15C00A1825D /* Debug */,

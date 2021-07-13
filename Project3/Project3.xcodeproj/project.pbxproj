@@ -62,7 +62,7 @@
 		F8ACF352267F9B3100C5D906 = {
 			isa = PBXGroup;
 			children = (
-				F8ACF35D267F9B3200C5D906 /* HWS-Project1 */,
+				F8ACF35D267F9B3200C5D906 /* Project3 */,
 				F8ACF35C267F9B3200C5D906 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,7 +75,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8ACF35D267F9B3200C5D906 /* HWS-Project1 */ = {
+		F8ACF35D267F9B3200C5D906 /* Project3 */ = {
 			isa = PBXGroup;
 			children = (
 				F8ACF372267F9D7400C5D906 /* Content */,
@@ -88,7 +88,7 @@
 				F8ACF369267F9B3900C5D906 /* LaunchScreen.storyboard */,
 				F8ACF36C267F9B3900C5D906 /* Info.plist */,
 			);
-			path = "HWS-Project1";
+			path = Project3;
 			sourceTree = "<group>";
 		};
 		F8ACF372267F9D7400C5D906 /* Content */ = {

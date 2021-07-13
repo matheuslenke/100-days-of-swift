@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F8ACF35B267F9B3200C5D906 /* HWS-Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HWS-Project1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8ACF35B267F9B3200C5D906 /* Project1-StormViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project1-StormViewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8ACF35E267F9B3200C5D906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8ACF360267F9B3200C5D906 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F8ACF362267F9B3200C5D906 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		F8ACF35C267F9B3200C5D906 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8ACF35B267F9B3200C5D906 /* HWS-Project1.app */,
+				F8ACF35B267F9B3200C5D906 /* Project1-StormViewer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8ACF35A267F9B3100C5D906 /* HWS-Project1 */ = {
+		F8ACF35A267F9B3100C5D906 /* Project1-StormViewer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8ACF36F267F9B3900C5D906 /* Build configuration list for PBXNativeTarget "HWS-Project1" */;
+			buildConfigurationList = F8ACF36F267F9B3900C5D906 /* Build configuration list for PBXNativeTarget "Project1-StormViewer" */;
 			buildPhases = (
 				F8ACF357267F9B3100C5D906 /* Sources */,
 				F8ACF358267F9B3100C5D906 /* Frameworks */,
@@ -123,9 +123,9 @@
 			);
 			dependencies = (
 			);
-			name = "HWS-Project1";
+			name = "Project1-StormViewer";
 			productName = "HWS-Project1";
-			productReference = F8ACF35B267F9B3200C5D906 /* HWS-Project1.app */;
+			productReference = F8ACF35B267F9B3200C5D906 /* Project1-StormViewer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -142,7 +142,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F8ACF356267F9B3100C5D906 /* Build configuration list for PBXProject "HWS-Project1" */;
+			buildConfigurationList = F8ACF356267F9B3100C5D906 /* Build configuration list for PBXProject "Project1-StormViewer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -155,7 +155,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8ACF35A267F9B3100C5D906 /* HWS-Project1 */,
+				F8ACF35A267F9B3100C5D906 /* Project1-StormViewer */,
 			);
 		};
 /* End PBXProject section */
@@ -374,7 +374,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F8ACF356267F9B3100C5D906 /* Build configuration list for PBXProject "HWS-Project1" */ = {
+		F8ACF356267F9B3100C5D906 /* Build configuration list for PBXProject "Project1-StormViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8ACF36D267F9B3900C5D906 /* Debug */,
@@ -383,7 +383,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8ACF36F267F9B3900C5D906 /* Build configuration list for PBXNativeTarget "HWS-Project1" */ = {
+		F8ACF36F267F9B3900C5D906 /* Build configuration list for PBXNativeTarget "Project1-StormViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8ACF370267F9B3900C5D906 /* Debug */,
