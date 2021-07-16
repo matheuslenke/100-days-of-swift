@@ -16,6 +16,8 @@ class ViewController: UITableViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(startGame))
+        
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 allWords = startWords.components(separatedBy: "\n")
@@ -29,7 +31,7 @@ class ViewController: UITableViewController {
         startGame()
     }
 
-    func startGame() {
+    @objc func startGame() {
         title = allWords.randomElement()
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()
@@ -62,38 +64,32 @@ class ViewController: UITableViewController {
     func submit(_ answer: String) {
         let lowerAnswer = answer.lowercased()
         
-        let errorTitle: String
-        let errorMessage: String
-        
         if !isSameWord(word: lowerAnswer) {
             if isPossible(word: lowerAnswer) {
                 if isOriginal(word: lowerAnswer) {
                     if isReal(word: lowerAnswer) {
-                        usedWords.insert(answer, at: 0)
-                        
-                        let indexPath = IndexPath(row: 0, section: 0)
-                        tableView.insertRows(at: [indexPath], with: .automatic)
-                        return
+                        if !isTooSmall(word: lowerAnswer) {
+                            usedWords.insert(lowerAnswer, at: 0)
+                            
+                            let indexPath = IndexPath(row: 0, section: 0)
+                            tableView.insertRows(at: [indexPath], with: .automatic)
+                            return
+                        } else {
+                            showErrorMessage(title: "Word too small", message: "Minimun length of 3 characters")
+                        }
                     } else {
-                        errorTitle = "Word not recognized"
-                        errorMessage = "You can't just make them up, you know!"
+                        showErrorMessage(title: "Word not recognized", message: "You can't just make them up, you know!")
                     }
                 } else {
-                    errorTitle = "Word already used"
-                    errorMessage = "Be more original!!"
+                    showErrorMessage(title: "Word already used", message: "Be more original!")
                 }
             } else {
-                errorTitle = "Word not possible"
-                errorMessage = "You can't spell that word form \(title!.lowercased())"
+                showErrorMessage(title: "Word not possible", message: "You can't spell that word form \(title!.lowercased())")
             }
         } else {
-            errorTitle = "This is the title word!"
-            errorMessage = "You can't use \"\(title!.lowercased())\" again!"
+            showErrorMessage(title: "This is the title word!", message: "You can't use \"\(title!.lowercased())\" again!")
         }
-        
-        let ac = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Ok", style: .default))
-        present(ac, animated: true)
+
     }
     
     func isPossible(word: String) -> Bool {
@@ -123,6 +119,19 @@ class ViewController: UITableViewController {
     func isSameWord(word: String) -> Bool {
         guard let tempWord = title?.lowercased() else { return false }
         return word == tempWord
+    }
+    
+    func isTooSmall(word: String) -> Bool {
+        if word.count < 3 {
+            return true
+        }
+        return false
+    }
+    
+    func showErrorMessage(title: String, message: String) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(ac, animated: true)
     }
 }
 
