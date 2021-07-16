@@ -13,3 +13,5 @@
 "V:|[label1]-[label2]-[label3]"
 ```
 The - represents a 10pt spacing
+
+**Day 32** Today i learned the difference between widthAnchor, heightAnchor, topAnchor, bottomAnchor, leftAnchor, rightAnchor, leadingAnchor, trailingAnchor, centerXAnchor, and centerYAnchor. TrailingAnchor and leadingAnchor will flip in right-to-left languages. I also learned that i can use multiples and adding constants to constraints based on my main View
