@@ -7,3 +7,9 @@
 **Day 28** Today i learned a little about comparing strings and checking if a word is real, is possible, or it's letters are contained in another word. I also learned that in Swift you cant compare 2 strings with the == operator, just like booleans and numbers
 
 **Day 29** Today i made a challenge that made me fix the content i learned in the past 2 days. It was about dealing with strings, checking it's length, and presenting errors to the user. I also solve a bug that the app treated words in a case-sensitive way
+
+**Day 30** Today i started learning about how to do Auto layout directly in code. I now know that i can create horizontal and vertical stacks using a String to represent my elements, like this: 
+```swift
+"V:|[label1]-[label2]-[label3]"
+```
+The - represents a 10pt spacing
