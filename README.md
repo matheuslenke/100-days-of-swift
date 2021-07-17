@@ -17,3 +17,5 @@ The - represents a 10pt spacing
 **Day 32** Today i learned the difference between widthAnchor, heightAnchor, topAnchor, bottomAnchor, leftAnchor, rightAnchor, leadingAnchor, trailingAnchor, centerXAnchor, and centerYAnchor. TrailingAnchor and leadingAnchor will flip in right-to-left languages. I also learned that i can use multiples and adding constants to constraints based on my main View
 
 **Day 33** Today i learned about the Codable protocol, which automatically can parse data from a JSON to Swift objects
+
+**Day 34** Today i learned a little about how to use tabBars and how AppDelegate and SceneDelegate works

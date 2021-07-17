@@ -15,6 +15,7 @@
 		F8878BBB26A393E500291B53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8878BB926A393E500291B53 /* LaunchScreen.storyboard */; };
 		F8E5661426A39748001FBF11 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5661326A39748001FBF11 /* Petition.swift */; };
 		F8E5661626A397A8001FBF11 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5661526A397A8001FBF11 /* Petitions.swift */; };
+		F8E5661826A39A9B001FBF11 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5661726A39A9B001FBF11 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F8878BBC26A393E500291B53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8E5661326A39748001FBF11 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		F8E5661526A397A8001FBF11 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		F8E5661726A39A9B001FBF11 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		F8878BA226A393E100291B53 = {
 			isa = PBXGroup;
 			children = (
+				F8E5661726A39A9B001FBF11 /* DetailViewController.swift */,
 				F8878BAD26A393E100291B53 /* Project7-DataFeed */,
 				F8878BAC26A393E100291B53 /* Products */,
 			);
@@ -146,6 +149,7 @@
 				F8878BB326A393E100291B53 /* ViewController.swift in Sources */,
 				F8E5661426A39748001FBF11 /* Petition.swift in Sources */,
 				F8878BAF26A393E100291B53 /* AppDelegate.swift in Sources */,
+				F8E5661826A39A9B001FBF11 /* DetailViewController.swift in Sources */,
 				F8878BB126A393E100291B53 /* SceneDelegate.swift in Sources */,
 				F8E5661626A397A8001FBF11 /* Petitions.swift in Sources */,
 			);
