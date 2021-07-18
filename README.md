@@ -19,3 +19,5 @@ The - represents a 10pt spacing
 **Day 33** Today i learned about the Codable protocol, which automatically can parse data from a JSON to Swift objects
 
 **Day 34** Today i learned a little about how to use tabBars and how AppDelegate and SceneDelegate works
+
+**Day 35** Today i learned how to filter info in an array, and how to resize tableViewCell to word wrap and look nicer when displaying data.

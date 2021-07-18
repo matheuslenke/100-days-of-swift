@@ -9,9 +9,18 @@ import UIKit
 
 class ViewController: UITableViewController {
     var petitions = [Petition]()
+    var filterString = ""
+    var filteredPetitions = [Petition]()
+    var isShowingFilteredPetitions = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let creditsButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(showInfo))
+        let filterButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(filterPetitions))
+        let resetFilterButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetFilter))
+        navigationItem.rightBarButtonItems = [filterButton, resetFilterButton]
+        navigationItem.leftBarButtonItem = creditsButton
         
         let urlString: String
         
@@ -37,6 +46,38 @@ class ViewController: UITableViewController {
         present(ac, animated: true)
     }
     
+    @objc func showInfo() {
+        let ac = UIAlertController(title: "Info", message: "This data come from the We People API of the Whitehouse", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(ac, animated: true)
+    }
+    
+    @objc func filterPetitions() {
+        let ac = UIAlertController(title: "Filter", message: "Enter your filter to search in petitions", preferredStyle: .alert)
+        ac.addTextField { (textField) in
+            textField.text = ""
+        }
+        ac.addAction(UIAlertAction(title: "Ok", style: .default) { [weak ac] _ in
+            self.filterString = ac?.textFields![0].text ?? ""
+            if self.filterString != "" {
+                self.isShowingFilteredPetitions = true
+                for petition in self.petitions {
+                    if (petition.title.contains(self.filterString) || petition.body.contains(self.filterString)) {
+                        self.filteredPetitions.append(petition)
+                    }
+                }
+                self.tableView.reloadData()
+            }
+        })
+        present(ac, animated: true)
+    }
+    
+    @objc func resetFilter() {
+        isShowingFilteredPetitions = false
+        filteredPetitions =  [Petition]()
+        tableView.reloadData()
+    }
+    
     func parse(json: Data) {
         let decoder = JSONDecoder()
         
@@ -47,13 +88,25 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return petitions.count
+        if isShowingFilteredPetitions {
+            return filteredPetitions.count
+        } else {
+            return petitions.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let petition = petitions[indexPath.row]
+        let petition: Petition
+        if isShowingFilteredPetitions {
+            petition = filteredPetitions[indexPath.row]
+        } else {
+            petition = petitions[indexPath.row]
+        }
         cell.textLabel?.text = petition.title
+        cell.textLabel?.font = cell.textLabel?.font.withSize(20)
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.text = petition.body
         return cell;
     }
@@ -63,8 +116,6 @@ class ViewController: UITableViewController {
         vc.detailItem = petitions[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-
 
 }
 
