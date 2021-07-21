@@ -27,3 +27,5 @@ The - represents a 10pt spacing
 **Day 37** Today i learned about dealing with a lot of buttons and appending text to a textLabel, and again loading content from a file but using more complex separators to get all data needed for the game
 
 **Day 38** Today i made the chalenge to draw a gray line around a UIView, adjusting it width, and rounding it corners
+
+**Day 39** Today i learned more about Grand Central Dispatch and de Quality of Service queues, the user Interactive with highest priority, User initiated , Utility queue, for long tasks that user doesn't need right now, and the background queue. There is the default queue, bet
