@@ -25,3 +25,5 @@ The - represents a 10pt spacing
 **Day 36** Today i learned how to make a view entirely from code, and i found it really hard at first. A little confusing, specially for someone who already saw how SwiftUI is and really liked it
 
 **Day 37** Today i learned about dealing with a lot of buttons and appending text to a textLabel, and again loading content from a file but using more complex separators to get all data needed for the game
+
+**Day 38** Today i made the chalenge to draw a gray line around a UIView, adjusting it width, and rounding it corners

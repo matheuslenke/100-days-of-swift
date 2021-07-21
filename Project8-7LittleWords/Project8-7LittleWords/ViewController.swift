@@ -22,6 +22,7 @@ class ViewController: UIViewController {
             scoreLabel.text = "Score: \(score)"
         }
     }
+    var numberOfItemsMatched = 0
     var level = 1
 
 
@@ -75,6 +76,9 @@ class ViewController: UIViewController {
         
         let buttonsView = UIView()
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
+        buttonsView.layer.borderColor = UIColor.lightGray.cgColor
+        buttonsView.layer.borderWidth = 2
+        buttonsView.layer.cornerRadius = 10
         view.addSubview(buttonsView)
         
         NSLayoutConstraint.activate([
@@ -168,16 +172,24 @@ class ViewController: UIViewController {
 
             currentAnswer.text = ""
             score += 1
+            numberOfItemsMatched += 1
 
-            if score % 7 == 0 {
+            if numberOfItemsMatched % 7 == 0 {
                 let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
                 present(ac, animated: true)
             }
+        } else {
+            score -= 1
+            let ac = UIAlertController(title: "Wrong", message: "Please try again", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Let's go!", style: .default){ _ in
+                self.clearTapped()
+            })
+            present(ac, animated: true)
         }
     }
     
-    @objc func clearTapped(_ sender: UIButton) {
+    @objc func clearTapped(_ sender: UIButton? = nil) {
         currentAnswer.text = ""
 
         for btn in activatedButtons {
@@ -199,6 +211,7 @@ class ViewController: UIViewController {
     }
     
     func loadLevel() {
+        numberOfItemsMatched = 0
         var clueString = ""
         var solutionString = ""
         var letterBits = [String]()
