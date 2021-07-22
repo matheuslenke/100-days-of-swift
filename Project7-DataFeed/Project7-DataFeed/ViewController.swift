@@ -58,16 +58,22 @@ class ViewController: UITableViewController {
             textField.text = ""
         }
         ac.addAction(UIAlertAction(title: "Ok", style: .default) { [weak ac] _ in
-            self.filterString = ac?.textFields![0].text ?? ""
-            if self.filterString != "" {
-                self.isShowingFilteredPetitions = true
-                for petition in self.petitions {
-                    if (petition.title.contains(self.filterString) || petition.body.contains(self.filterString)) {
-                        self.filteredPetitions.append(petition)
+            
+                self.filterString = ac?.textFields![0].text ?? ""
+                if self.filterString != "" {
+                    DispatchQueue.global().async {
+                        self.isShowingFilteredPetitions = true
+                        for petition in self.petitions {
+                            if (petition.title.contains(self.filterString) || petition.body.contains(self.filterString)) {
+                                self.filteredPetitions.append(petition)
+                            }
+                        }
+                    }
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()                        
                     }
                 }
-                self.tableView.reloadData()
-            }
+            
         })
         present(ac, animated: true)
     }

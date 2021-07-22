@@ -17,18 +17,25 @@ class ViewController: UITableViewController {
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        let fm = FileManager.default
-        let path = Bundle.main.resourcePath!
-        let items = try! fm.contentsOfDirectory(atPath: path)
-        
-        for item in items {
-            if item.hasPrefix("nssl") {
-                // This is a picture to load!
-                pictures.append(item)
+        DispatchQueue.global().async {
+            let fm = FileManager.default
+            let path = Bundle.main.resourcePath!
+            let items = try! fm.contentsOfDirectory(atPath: path)
+            
+            for item in items {
+                if item.hasPrefix("nssl") {
+                    // This is a picture to load!
+                    self.pictures.append(item)
+                }
+            }
+            self.pictures.sort { item1, item2 in
+                item1 < item2
             }
         }
-        pictures.sort { item1, item2 in
-            item1 < item2
+        
+        DispatchQueue.main.async {
+            [weak self] in
+            self?.tableView.reloadData()
         }
     }
     
