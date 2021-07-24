@@ -29,3 +29,9 @@ The - represents a 10pt spacing
 **Day 38** Today i made the chalenge to draw a gray line around a UIView, adjusting it width, and rounding it corners
 
 **Day 39** Today i learned more about Grand Central Dispatch and de Quality of Service queues, the user Interactive with highest priority, User initiated , Utility queue, for long tasks that user doesn't need right now, and the background queue. There is the default queue, bet
+
+**Day 40** Today it was a review day, and i could apply some things i learned about GCD in past projects
+
+**Day 41** Today was a challenge and i've built a game from ground and it was really nice seeing i could use a lot of tools without looking back everytime. It isn't perfect but i'm happy that i was able to do it in 1 hour
+
+**Day 42** Today i started learning about Collection View, and it's differences and similarities with TableView. It's really good to have so many tools already built-in in UIKit
