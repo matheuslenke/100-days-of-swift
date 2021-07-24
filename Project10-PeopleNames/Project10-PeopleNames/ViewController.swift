@@ -40,10 +40,24 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     @objc func addNewPerson() {
-        let picker = UIImagePickerController()
-        picker.allowsEditing = true
-        picker.delegate = self
-        present(picker, animated: true)
+        
+        let ac = UIAlertController(title: "Add Contact", message: "Where do you want to load your photo from?", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "From library", style: .default, handler: { _ in
+            let picker = UIImagePickerController()
+            picker.allowsEditing = true
+            picker.delegate = self
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true)
+        }))
+        ac.addAction(UIAlertAction(title: "From Camera", style: .default, handler: { _ in
+            let picker = UIImagePickerController()
+            picker.allowsEditing = true
+            picker.delegate = self
+            picker.sourceType = .camera
+            self.present(picker, animated: true)
+        }))
+        present(ac, animated: true)
+
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -72,6 +86,18 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let person = people[indexPath.item]
         
+        let ac = UIAlertController(title: "Edit Contact", message: "What do you want to do?", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Rename Contact", style: .default, handler: { _ in
+            self.renamePerson(person)
+        }))
+        ac.addAction(UIAlertAction(title: "Delete contact", style: .destructive, handler: { _ in
+            self.deletePerson(at: indexPath.item)
+        }))
+        ac.addAction(UIAlertAction(title: "Return", style: .default))
+        present(ac, animated: true)
+    }
+    
+    func renamePerson(_ person: Person) {
         let ac = UIAlertController(title: "Rename Person", message: nil, preferredStyle: .alert)
         ac.addTextField()
         ac.addAction(UIAlertAction(title: "Ok", style: .default) {
@@ -83,6 +109,11 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(ac, animated: true)
+    }
+    
+    func deletePerson(at index: Int) {
+        people.remove(at: index)
+        collectionView.reloadData()
     }
 }
 

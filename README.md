@@ -37,3 +37,5 @@ The - represents a 10pt spacing
 **Day 42** Today i started learning about Collection View, and it's differences and similarities with TableView. It's really good to have so many tools already built-in in UIKit
 
 **Day 43** Today i started learning about UIImagePicker and it's so easy to get images from users phone, and it even has a built-in crop image feature! Also learned more about Collection View and cells
+
+**Day 44** Today i reviewed what i studied about CollectionView and UIImagePicker, and made some challenges. It was nice to revisit Project 1 and see that i could modify it with more confidence than in my first time
