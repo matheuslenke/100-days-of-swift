@@ -35,3 +35,5 @@ The - represents a 10pt spacing
 **Day 41** Today was a challenge and i've built a game from ground and it was really nice seeing i could use a lot of tools without looking back everytime. It isn't perfect but i'm happy that i was able to do it in 1 hour
 
 **Day 42** Today i started learning about Collection View, and it's differences and similarities with TableView. It's really good to have so many tools already built-in in UIKit
+
+**Day 43** Today i started learning about UIImagePicker and it's so easy to get images from users phone, and it even has a built-in crop image feature! Also learned more about Collection View and cells
