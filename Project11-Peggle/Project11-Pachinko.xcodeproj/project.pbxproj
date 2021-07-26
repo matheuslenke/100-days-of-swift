@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F8A8DAFF26AD7E8B0091D453 /* Project11-Peggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project11-Peggle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A8DAFF26AD7E8B0091D453 /* Project11-Pachinko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project11-Pachinko.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A8DB0226AD7E8B0091D453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A8DB0426AD7E8B0091D453 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		F8A8DB0826AD7E8B0091D453 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		F8A8DB0026AD7E8B0091D453 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8A8DAFF26AD7E8B0091D453 /* Project11-Peggle.app */,
+				F8A8DAFF26AD7E8B0091D453 /* Project11-Pachinko.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8A8DAFE26AD7E8B0091D453 /* Project11-Peggle */ = {
+		F8A8DAFE26AD7E8B0091D453 /* Project11-Pachinko */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8A8DB1426AD7E8F0091D453 /* Build configuration list for PBXNativeTarget "Project11-Peggle" */;
+			buildConfigurationList = F8A8DB1426AD7E8F0091D453 /* Build configuration list for PBXNativeTarget "Project11-Pachinko" */;
 			buildPhases = (
 				F8A8DAFB26AD7E8B0091D453 /* Sources */,
 				F8A8DAFC26AD7E8B0091D453 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "Project11-Peggle";
+			name = "Project11-Pachinko";
 			productName = "Project11-Peggle";
-			productReference = F8A8DAFF26AD7E8B0091D453 /* Project11-Peggle.app */;
+			productReference = F8A8DAFF26AD7E8B0091D453 /* Project11-Pachinko.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F8A8DAFA26AD7E8B0091D453 /* Build configuration list for PBXProject "Project11-Peggle" */;
+			buildConfigurationList = F8A8DAFA26AD7E8B0091D453 /* Build configuration list for PBXProject "Project11-Pachinko" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8A8DAFE26AD7E8B0091D453 /* Project11-Peggle */,
+				F8A8DAFE26AD7E8B0091D453 /* Project11-Pachinko */,
 			);
 		};
 /* End PBXProject section */
@@ -314,7 +314,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F8A8DAFA26AD7E8B0091D453 /* Build configuration list for PBXProject "Project11-Peggle" */ = {
+		F8A8DAFA26AD7E8B0091D453 /* Build configuration list for PBXProject "Project11-Pachinko" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8A8DB1226AD7E8F0091D453 /* Debug */,
@@ -323,7 +323,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8A8DB1426AD7E8F0091D453 /* Build configuration list for PBXNativeTarget "Project11-Peggle" */ = {
+		F8A8DB1426AD7E8F0091D453 /* Build configuration list for PBXNativeTarget "Project11-Pachinko" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8A8DB1526AD7E8F0091D453 /* Debug */,

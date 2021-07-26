@@ -41,3 +41,5 @@ The - represents a 10pt spacing
 **Day 44** Today i reviewed what i studied about CollectionView and UIImagePicker, and made some challenges. It was nice to revisit Project 1 and see that i could modify it with more confidence than in my first time
 
 **Day 45** Today i learned about SpriteKit and starting creating a game. I've used the SKSpriteNode to create sprites and add it to screen with addChild. I also learned to add a physics body with SKPhyisicsBody
+
+**Day 46** Today i learned more about SpriteKit and about colision between different objects, checking what to do depending on the object, add labels and detect if there is a label where the user is clicking, so it do a different code. And also, do something different based the coordinates of the touch location
