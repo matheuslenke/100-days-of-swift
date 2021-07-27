@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F825F6B826B050C7002F3C04 /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = F825F6B726B050C7002F3C04 /* FireParticles.sks */; };
 		F8A8DB0326AD7E8B0091D453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8DB0226AD7E8B0091D453 /* AppDelegate.swift */; };
 		F8A8DB0526AD7E8B0091D453 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8A8DB0426AD7E8B0091D453 /* GameScene.sks */; };
 		F8A8DB0926AD7E8B0091D453 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8DB0826AD7E8B0091D453 /* GameScene.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F825F6B726B050C7002F3C04 /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticles.sks; sourceTree = "<group>"; };
 		F8A8DAFF26AD7E8B0091D453 /* Project11-Pachinko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project11-Pachinko.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A8DB0226AD7E8B0091D453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A8DB0426AD7E8B0091D453 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				F8A8DB0826AD7E8B0091D453 /* GameScene.swift */,
 				F8A8DB0A26AD7E8B0091D453 /* GameViewController.swift */,
 				F8A8DB0C26AD7E8B0091D453 /* Main.storyboard */,
+				F825F6B726B050C7002F3C04 /* FireParticles.sks */,
 				F8A8DB0F26AD7E8F0091D453 /* Assets.xcassets */,
 				F8A8DB1126AD7E8F0091D453 /* Info.plist */,
 			);
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A8DB0E26AD7E8B0091D453 /* Main.storyboard in Resources */,
+				F825F6B826B050C7002F3C04 /* FireParticles.sks in Resources */,
 				F8A8DB0526AD7E8B0091D453 /* GameScene.sks in Resources */,
 				F8A8DB1026AD7E8F0091D453 /* Assets.xcassets in Resources */,
 			);
