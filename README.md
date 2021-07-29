@@ -45,3 +45,7 @@ The - represents a 10pt spacing
 **Day 46** Today i learned more about SpriteKit and about colision between different objects, checking what to do depending on the object, add labels and detect if there is a label where the user is clicking, so it do a different code. And also, do something different based the coordinates of the touch location
 
 **Day 47** Today i learned about SpriteKit Particles with SKEmitterNode, and also modified a fire particle. I also made a challenge and could understand better SpriteKit
+
+**Day 48** Today i learned about how to store some data in disk with UserDefaults. it is mainly used to store small pieces of data like user preferences
+
+**Day 49** Today i practiced more about UserDefaults, modifying some of my last projects to use it and have a better experience. I learned more about the difference between Codable and NSCoding, and how to convert JSON to load and save it with user defaults

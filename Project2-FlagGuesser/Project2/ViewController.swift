@@ -12,9 +12,15 @@ class ViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet var highscoreLabel: UILabel!
     
     var countries = [String]()
     var score = 0
+    var highscore = 0 {
+        didSet {
+            highscoreLabel.text = "Highscore: \(highscore)"
+        }
+    }
     var correctAnswer = 0
     var questionsAsked = 0
     
@@ -30,6 +36,11 @@ class ViewController: UIViewController {
         button1.layer.borderColor = UIColor.lightGray.cgColor
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
+        
+        let defaults = UserDefaults.standard
+        
+        let savedHighscore = defaults.integer(forKey: "Highscore")
+        highscore = savedHighscore
         
         scoreLabel.text = "Score: \(score)"
         askQuestion()
@@ -55,8 +66,13 @@ class ViewController: UIViewController {
         var title: String
         
         if sender.tag == correctAnswer {
+            let defaults = UserDefaults.standard
             title = "Correct!"
             score += 1
+            if score > highscore {
+                highscore = score
+                defaults.set(highscore, forKey: "Highscore")
+            }
         } else {
             title = "Wrong! this is the flag of \(countries[sender.tag].uppercased()) "
             score -= 1

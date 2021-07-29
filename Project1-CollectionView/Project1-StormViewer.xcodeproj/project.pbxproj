@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F8751C4926AC73E800B30D8D /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8751C4826AC73E800B30D8D /* ImageCell.swift */; };
+		F89FE80526B2C58200CEC56C /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89FE80426B2C58200CEC56C /* Picture.swift */; };
 		F8ACF35F267F9B3200C5D906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ACF35E267F9B3200C5D906 /* AppDelegate.swift */; };
 		F8ACF361267F9B3200C5D906 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ACF360267F9B3200C5D906 /* SceneDelegate.swift */; };
 		F8ACF363267F9B3200C5D906 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ACF362267F9B3200C5D906 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		F8751C4826AC73E800B30D8D /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		F89FE80426B2C58200CEC56C /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		F8ACF35B267F9B3200C5D906 /* Project1-StormViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project1-StormViewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8ACF35E267F9B3200C5D906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8ACF360267F9B3200C5D906 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				F8ACF35E267F9B3200C5D906 /* AppDelegate.swift */,
 				F8ACF360267F9B3200C5D906 /* SceneDelegate.swift */,
 				F8ACF362267F9B3200C5D906 /* ViewController.swift */,
+				F89FE80426B2C58200CEC56C /* Picture.swift */,
 				F8751C4826AC73E800B30D8D /* ImageCell.swift */,
 				F8B4E9202680EE6C00FBF87A /* DetailViewController.swift */,
 				F8ACF364267F9B3200C5D906 /* Main.storyboard */,
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F89FE80526B2C58200CEC56C /* Picture.swift in Sources */,
 				F8ACF363267F9B3200C5D906 /* ViewController.swift in Sources */,
 				F8ACF35F267F9B3200C5D906 /* AppDelegate.swift in Sources */,
 				F8ACF361267F9B3200C5D906 /* SceneDelegate.swift in Sources */,

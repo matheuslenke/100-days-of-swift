@@ -27,14 +27,26 @@ class ViewController: UITableViewController {
         if allWords.isEmpty {
             allWords = ["silkworm"]
         }
+        let defaults = UserDefaults.standard
+        if let savedWord = defaults.string(forKey: "title") {
+            title = savedWord
+            if let savedUsedWords = defaults.stringArray(forKey: "usedWords") {
+                usedWords = savedUsedWords
+            }
+        } else {
+            startGame()
+        }
         
-        startGame()
+        
     }
 
     @objc func startGame() {
         title = allWords.randomElement()
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()
+        let defaults = UserDefaults.standard
+        defaults.set(title, forKey: "title")
+        defaults.set(usedWords, forKey: "usedWords")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,6 +82,8 @@ class ViewController: UITableViewController {
                     if isReal(word: lowerAnswer) {
                         if !isTooSmall(word: lowerAnswer) {
                             usedWords.insert(lowerAnswer, at: 0)
+                            let defaults = UserDefaults.standard
+                            defaults.set(usedWords, forKey: "usedWords")
                             
                             let indexPath = IndexPath(row: 0, section: 0)
                             tableView.insertRows(at: [indexPath], with: .automatic)
