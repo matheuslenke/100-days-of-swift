@@ -49,3 +49,5 @@ The - represents a 10pt spacing
 **Day 48** Today i learned about how to store some data in disk with UserDefaults. it is mainly used to store small pieces of data like user preferences
 
 **Day 49** Today i practiced more about UserDefaults, modifying some of my last projects to use it and have a better experience. I learned more about the difference between Codable and NSCoding, and how to convert JSON to load and save it with user defaults
+
+**Day 50** Half of the Challenge done!! Today was a challenge and i needed to create a tableView showing a list of captions, and when selected, it shows a picture related to that caption. It was really good to understand better how present worked and how to make it prompt for user an AlertController and then an UIImagePicker
