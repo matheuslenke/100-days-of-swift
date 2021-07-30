@@ -51,3 +51,7 @@ The - represents a 10pt spacing
 **Day 49** Today i practiced more about UserDefaults, modifying some of my last projects to use it and have a better experience. I learned more about the difference between Codable and NSCoding, and how to convert JSON to load and save it with user defaults
 
 **Day 50** Half of the Challenge done!! Today was a challenge and i needed to create a tableView showing a list of captions, and when selected, it shows a picture related to that caption. It was really good to understand better how present worked and how to make it prompt for user an AlertController and then an UIImagePicker
+
+**Day 51** Today i watched two talks by Paul Hudson at different conferences, one talking about elements of functional programming in Swift and another about some subjects that new learners of Swift struggle. It was nice to review some concepts and learn a little more about things like map, flatMap and filter
+
+**Day 52** Today i started project 13, creating an App to apply filter to pictures. It was most a wrap up and code that i already knew, but i learned a little about generating auto layout automatically and about Core Image concepts
