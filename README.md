@@ -55,3 +55,5 @@ The - represents a 10pt spacing
 **Day 51** Today i watched two talks by Paul Hudson at different conferences, one talking about elements of functional programming in Swift and another about some subjects that new learners of Swift struggle. It was nice to review some concepts and learn a little more about things like map, flatMap and filter
 
 **Day 52** Today i started project 13, creating an App to apply filter to pictures. It was most a wrap up and code that i already knew, but i learned a little about generating auto layout automatically and about Core Image concepts
+
+**Day 53** Today i used CoreImage and applied some filters to pictures. I also used UIImageWriteToSavedPhotosAlbum to save the picture with filters
