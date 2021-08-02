@@ -12,10 +12,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var intensity: UISlider!
+    @IBOutlet var radius: UISlider!
+    
     var currentImage: UIImage!
+    @IBOutlet var changeFilterButton: UIButton!
     
     var context: CIContext!
     var currentFilter: CIFilter!
+    var currentFilterName = "CISepiaTone" {
+        didSet {
+            changeFilterButton?.titleLabel?.text = currentFilterName
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +33,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         context = CIContext()
         currentFilter = CIFilter(name: "CISepiaTone")
-        
     }
-    
-
     
     @objc func importPicture() {
         let picker = UIImagePickerController()
@@ -71,6 +76,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         guard let actionTitle = action.title else { return }
         
         currentFilter = CIFilter(name: actionTitle)
+        currentFilterName = actionTitle
         
         let beginImage = CIImage(image: currentImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
@@ -79,13 +85,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func save(_ sender: Any) {
-        guard let image = imageView.image else { return }
+        guard let image = imageView.image else {
+            let ac = UIAlertController(title: "Save error", message: "No image selected", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+            return
+        }
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     @IBAction func intensityChanged(_ sender: Any) {
         applyProcessing()
     }
+    @IBAction func radiusChanged(_ sender: Any) {
+        applyProcessing()
+    }
+    
     
     func applyProcessing() {
         let inputKeys = currentFilter.inputKeys
@@ -95,7 +110,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFilter.setValue(intensity.value * 200, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(intensity.value * radius.value, forKey: kCIInputRadiusKey)
         }
         
         if inputKeys.contains(kCIInputScaleKey) {
