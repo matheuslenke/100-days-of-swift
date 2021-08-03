@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var currentFilter: CIFilter!
     var currentFilterName = "CISepiaTone" {
         didSet {
-            changeFilterButton?.titleLabel?.text = currentFilterName
+            changeFilterButton?.setTitle(currentFilterName, for: .normal)
         }
     }
     
@@ -33,6 +33,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         context = CIContext()
         currentFilter = CIFilter(name: "CISepiaTone")
+        currentFilterName = "CISepiaTone"
     }
     
     @objc func importPicture() {
@@ -77,6 +78,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         currentFilter = CIFilter(name: actionTitle)
         currentFilterName = actionTitle
+        print(currentFilterName)
         
         let beginImage = CIImage(image: currentImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
@@ -104,13 +106,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func applyProcessing() {
         let inputKeys = currentFilter.inputKeys
+        let screenSize = imageView.bounds
         
         if inputKeys.contains(kCIInputIntensityKey) {
             currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
         }
         
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFilter.setValue(intensity.value * radius.value, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(CGFloat(radius.value) * screenSize.height * 2 , forKey: kCIInputRadiusKey)
         }
         
         if inputKeys.contains(kCIInputScaleKey) {

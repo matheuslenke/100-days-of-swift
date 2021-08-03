@@ -57,3 +57,5 @@ The - represents a 10pt spacing
 **Day 52** Today i started project 13, creating an App to apply filter to pictures. It was most a wrap up and code that i already knew, but i learned a little about generating auto layout automatically and about Core Image concepts
 
 **Day 53** Today i used CoreImage and applied some filters to pictures. I also used UIImageWriteToSavedPhotosAlbum to save the picture with filters
+
+**Day 54** Today was the challenge to make my Photo filters app better, and i had a lot of difficulty trying to make something different with auto Layout and to know how to deal with Float and CGFloat, but i think it was good to struggle 2 days in this project because now i fell like i know how to solve more problems
