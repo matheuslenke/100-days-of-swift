@@ -61,3 +61,5 @@ The - represents a 10pt spacing
 **Day 54** Today was the challenge to make my Photo filters app better, and i had a lot of difficulty trying to make something different with auto Layout and to know how to deal with Float and CGFloat, but i think it was good to struggle 2 days in this project because now i fell like i know how to solve more problems
 
 **Day 55** Today i learned more about SpriteKit and how to animate penguins in a different game. It had a lot of randomness and i used asyncAfter to call functions after some delay indefinetly
+
+**Day 56** Today was the first time i created my own particles and learned more about audio playing in SpriteKit. I think it is useful, but it has some bugs probably cause i didn't know exactly how to do properly all the animations, but it worked really good at the end

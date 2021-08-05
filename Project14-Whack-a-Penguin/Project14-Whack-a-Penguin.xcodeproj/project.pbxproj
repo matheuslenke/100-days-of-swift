@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F87141EE26BC225700BC85CB /* goodSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = F87141ED26BC225700BC85CB /* goodSmoke.sks */; };
+		F87141F026BC22E400BC85CB /* badSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = F87141EF26BC22E400BC85CB /* badSmoke.sks */; };
+		F87141FC26BC261000BC85CB /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F87141FB26BC261000BC85CB /* MyParticle.sks */; };
+		F87141FF26BC30E500BC85CB /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = F8BE860626BB4AD900ED0BE4 /* whack.caf */; };
+		F871420026BC30E800BC85CB /* gameOver.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F87141E626BC216000BC85CB /* gameOver.m4a */; };
+		F871420126BC30EB00BC85CB /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = F8BE860526BB4AD800ED0BE4 /* whackBad.caf */; };
 		F8BE85F126BB491A00ED0BE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE85F026BB491A00ED0BE4 /* AppDelegate.swift */; };
 		F8BE85F326BB491A00ED0BE4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8BE85F226BB491A00ED0BE4 /* GameScene.sks */; };
 		F8BE85F726BB491A00ED0BE4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE85F626BB491A00ED0BE4 /* GameScene.swift */; };
@@ -17,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F87141E626BC216000BC85CB /* gameOver.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameOver.m4a; sourceTree = "<group>"; };
+		F87141ED26BC225700BC85CB /* goodSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = goodSmoke.sks; sourceTree = "<group>"; };
+		F87141EF26BC22E400BC85CB /* badSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = badSmoke.sks; sourceTree = "<group>"; };
+		F87141FB26BC261000BC85CB /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 		F8BE85ED26BB491A00ED0BE4 /* Project14-Whack-a-Penguin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project14-Whack-a-Penguin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BE85F026BB491A00ED0BE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8BE85F226BB491A00ED0BE4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -41,6 +51,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F87141FD26BC2E0500BC85CB /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F8BE860626BB4AD900ED0BE4 /* whack.caf */,
+				F87141E626BC216000BC85CB /* gameOver.m4a */,
+				F8BE860526BB4AD800ED0BE4 /* whackBad.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		F87141FE26BC2E1800BC85CB /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				F87141ED26BC225700BC85CB /* goodSmoke.sks */,
+				F87141EF26BC22E400BC85CB /* badSmoke.sks */,
+				F87141FB26BC261000BC85CB /* MyParticle.sks */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
 		F8BE85E426BB491A00ED0BE4 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +90,8 @@
 		F8BE85EF26BB491A00ED0BE4 /* Project14-Whack-a-Penguin */ = {
 			isa = PBXGroup;
 			children = (
+				F87141FE26BC2E1800BC85CB /* Particles */,
+				F87141FD26BC2E0500BC85CB /* Sounds */,
 				F8BE85F026BB491A00ED0BE4 /* AppDelegate.swift */,
 				F8BE85F226BB491A00ED0BE4 /* GameScene.sks */,
 				F8BE85F626BB491A00ED0BE4 /* GameScene.swift */,
@@ -68,8 +100,6 @@
 				F8BE85FA26BB491A00ED0BE4 /* Main.storyboard */,
 				F8BE85FD26BB491F00ED0BE4 /* Assets.xcassets */,
 				F8BE85FF26BB491F00ED0BE4 /* Info.plist */,
-				F8BE860626BB4AD900ED0BE4 /* whack.caf */,
-				F8BE860526BB4AD800ED0BE4 /* whackBad.caf */,
 			);
 			path = "Project14-Whack-a-Penguin";
 			sourceTree = "<group>";
@@ -131,9 +161,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F87141EE26BC225700BC85CB /* goodSmoke.sks in Resources */,
 				F8BE85FC26BB491A00ED0BE4 /* Main.storyboard in Resources */,
+				F871420026BC30E800BC85CB /* gameOver.m4a in Resources */,
+				F87141FF26BC30E500BC85CB /* whack.caf in Resources */,
 				F8BE85F326BB491A00ED0BE4 /* GameScene.sks in Resources */,
 				F8BE85FE26BB491F00ED0BE4 /* Assets.xcassets in Resources */,
+				F87141F026BC22E400BC85CB /* badSmoke.sks in Resources */,
+				F87141FC26BC261000BC85CB /* MyParticle.sks in Resources */,
+				F871420126BC30EB00BC85CB /* whackBad.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
