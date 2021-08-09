@@ -64,6 +64,11 @@ class ViewController: UIViewController {
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [],
+           animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+
+        })
         
         if sender.tag == correctAnswer {
             let defaults = UserDefaults.standard
@@ -81,7 +86,14 @@ class ViewController: UIViewController {
         
         let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
         
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: {
+            _ in
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [],
+               animations: {
+                sender.transform = .identity
+            })
+            self.askQuestion()
+        }))
         
         present(ac, animated: true)
     }

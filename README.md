@@ -65,3 +65,5 @@ The - represents a 10pt spacing
 **Day 56** Today was the first time i created my own particles and learned more about audio playing in SpriteKit. I think it is useful, but it has some bugs probably cause i didn't know exactly how to do properly all the animations, but it worked really good at the end
 
 **Day 57** Today i learned more about animations with CoreAnimation, and how easy it is to make basic animations, with CoreAnimation handling everything between two states that i define. I can even reset the transformations using .identity
+
+**Day 58** Today i applied CoreAnimations in past projects, and now i understand it a lot more. It makes animations without a lot of code and it's extremly powerful in personalization. I also used with ease-in ease-out and with spring animations
