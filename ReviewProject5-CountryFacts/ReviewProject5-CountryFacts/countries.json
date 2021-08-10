@@ -1,0 +1,35 @@
+{
+    "countries": [
+        {
+            "name": "Brazil",
+            "capitalCity": "Distrito Federal",
+            "size": 8510295.914,
+            "population": 211755692,
+            "currency": "BRL",
+            "languages": ["Portuguese"],
+            "president": "Fora Bolsonaro",
+            "flagImage": "brasil"
+        },
+        {
+            "name": "Canada",
+            "capitalCity": "Ottawa",
+            "size": 9984670.0,
+            "population": 38005238,
+            "currency": "CAD",
+            "languages": ["English", "Français"],
+            "president": "Justin Trudeau",
+            "flagImage": "canada"
+        },
+        {
+            "name": "France",
+            "capitalCity": "Paris",
+            "size": 543965,
+            "population": 67348000,
+            "currency": "EUR",
+            "languages": ["Français"],
+            "president": "Emmanuel Macron",
+            "flagImage": "france"
+        }
+    ]
+}
+
