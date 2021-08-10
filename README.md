@@ -67,3 +67,7 @@ The - represents a 10pt spacing
 **Day 57** Today i learned more about animations with CoreAnimation, and how easy it is to make basic animations, with CoreAnimation handling everything between two states that i define. I can even reset the transformations using .identity
 
 **Day 58** Today i applied CoreAnimations in past projects, and now i understand it a lot more. It makes animations without a lot of code and it's extremly powerful in personalization. I also used with ease-in ease-out and with spring animations
+
+**Day 59** Today i made a challenge creating from scratch an App that loads a JSON file filled with countries info, and put it in a table view, presenting a detail view when you select it. It was good to review some concepts of loading from a file
+
+**Day 60** Today i started using MapKit and understanding it protocols. I also created some annotations for Capitals, and created my own way of showing info in that annotations using Apple tools
