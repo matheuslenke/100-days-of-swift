@@ -36,11 +36,27 @@
                     <navigationItem key="navigationItem" id="kUq-iv-FHP"/>
                     <connections>
                         <outlet property="mapView" destination="RoE-F9-4Ym" id="f2v-Fi-OcU"/>
+                        <segue destination="265-Hn-oY3" kind="presentation" identifier="goToDetails" id="4At-1T-MDi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028.985507246377" y="114.50892857142857"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="xK9-sV-6Lv">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="265-Hn-oY3" customClass="DetailViewController" customModule="Project16_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dcS-yl-kO2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="L4u-id-Pvh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cd-AG-VwD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Ni-Bt-U4K">

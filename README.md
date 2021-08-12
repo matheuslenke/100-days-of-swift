@@ -71,3 +71,5 @@ The - represents a 10pt spacing
 **Day 59** Today i made a challenge creating from scratch an App that loads a JSON file filled with countries info, and put it in a table view, presenting a detail view when you select it. It was good to review some concepts of loading from a file
 
 **Day 60** Today i started using MapKit and understanding it protocols. I also created some annotations for Capitals, and created my own way of showing info in that annotations using Apple tools
+
+**Day 61** Today i made a challenge of doing a webView showing after user clicking in an Annotation info button in map, and it was a really nice result and easy to do. I also played with different ways to show a Map

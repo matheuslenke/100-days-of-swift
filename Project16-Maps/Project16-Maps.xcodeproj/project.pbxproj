@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8690BCD26C5829200CE5918 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8690BCC26C5829200CE5918 /* DetailViewController.swift */; };
 		F8735C3526C2C16200FCEDCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8735C3426C2C16200FCEDCB /* AppDelegate.swift */; };
 		F8735C3726C2C16200FCEDCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8735C3626C2C16200FCEDCB /* SceneDelegate.swift */; };
 		F8735C3926C2C16200FCEDCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8735C3826C2C16200FCEDCB /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8690BCC26C5829200CE5918 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F8735C3126C2C16200FCEDCB /* Project16-Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project16-Maps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8735C3426C2C16200FCEDCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8735C3626C2C16200FCEDCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				F8735C3826C2C16200FCEDCB /* ViewController.swift */,
 				F8735C4826C2C29D00FCEDCB /* Capital.swift */,
 				F8735C3A26C2C16200FCEDCB /* Main.storyboard */,
+				F8690BCC26C5829200CE5918 /* DetailViewController.swift */,
 				F8735C3D26C2C16700FCEDCB /* Assets.xcassets */,
 				F8735C3F26C2C16700FCEDCB /* LaunchScreen.storyboard */,
 				F8735C4226C2C16700FCEDCB /* Info.plist */,
@@ -142,6 +145,7 @@
 			files = (
 				F8735C3926C2C16200FCEDCB /* ViewController.swift in Sources */,
 				F8735C3526C2C16200FCEDCB /* AppDelegate.swift in Sources */,
+				F8690BCD26C5829200CE5918 /* DetailViewController.swift in Sources */,
 				F8735C4926C2C29D00FCEDCB /* Capital.swift in Sources */,
 				F8735C3726C2C16200FCEDCB /* SceneDelegate.swift in Sources */,
 			);
