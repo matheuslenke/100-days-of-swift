@@ -73,3 +73,5 @@ The - represents a 10pt spacing
 **Day 60** Today i started using MapKit and understanding it protocols. I also created some annotations for Capitals, and created my own way of showing info in that annotations using Apple tools
 
 **Day 61** Today i made a challenge of doing a webView showing after user clicking in an Annotation info button in map, and it was a really nice result and easy to do. I also played with different ways to show a Map
+
+**Day 62** Today i started a new game in spriteKit, using Timers and physics to make it work
