@@ -75,3 +75,5 @@ The - represents a 10pt spacing
 **Day 61** Today i made a challenge of doing a webView showing after user clicking in an Annotation info button in map, and it was a really nice result and easy to do. I also played with different ways to show a Map
 
 **Day 62** Today i started a new game in spriteKit, using Timers and physics to make it work
+
+**Day 63** Today i made a challenge in this new project to make some adjustments, and i even made a restart label that was not needed, just because i felt it was missing it
