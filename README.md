@@ -77,3 +77,5 @@ The - represents a 10pt spacing
 **Day 62** Today i started a new game in spriteKit, using Timers and physics to make it work
 
 **Day 63** Today i made a challenge in this new project to make some adjustments, and i even made a restart label that was not needed, just because i felt it was missing it
+
+**Day 64** Today i learned more about debugging, how to use assert, how to use breakpoints in xCode and how to view my views hierarchy when my app is running, so i can debug elements too
