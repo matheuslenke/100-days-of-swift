@@ -79,3 +79,5 @@ The - represents a 10pt spacing
 **Day 63** Today i made a challenge in this new project to make some adjustments, and i even made a restart label that was not needed, just because i felt it was missing it
 
 **Day 64** Today i learned more about debugging, how to use assert, how to use breakpoints in xCode and how to view my views hierarchy when my app is running, so i can debug elements too
+
+**Day 65** Today i applied what i learned in Day 64 in project 1 and project 5, using breakpoints, asserts and Exception breakpoints to debug forced errors in my apps
