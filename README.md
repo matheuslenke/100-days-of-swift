@@ -83,3 +83,5 @@ The - represents a 10pt spacing
 **Day 65** Today i applied what i learned in Day 64 in project 1 and project 5, using breakpoints, asserts and Exception breakpoints to debug forced errors in my apps
 
 **Day 66** Today was a hard day, it took me more than one day to do it. I need to make from scratch a game of a shooting gallery, and it was a little hard. I needed to use a mix of concepts from the Spaceship game and the Penguins game, but after a lot of debugging that i learned in the last days, i finally made it work and liked the result. If i worked a little more in it, it would definetly be a good simple game to launch on AppStore
+
+**Day 67** Today i started to create my own Safari extension, and it was cool to understand that iOS actually don't let extensions and safari exchange data directly, and act as a parser to make sure that anything suspicius won't hurt the user or get sensitive data
