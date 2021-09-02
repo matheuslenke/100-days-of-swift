@@ -87,3 +87,5 @@ The - represents a 10pt spacing
 **Day 67** Today i started to create my own Safari extension, and it was cool to understand that iOS actually don't let extensions and safari exchange data directly, and act as a parser to make sure that anything suspicius won't hurt the user or get sensitive data
 
 **Day 68** Today i finished the Safari extension, exhanging data between iOS and Javascript code, and handling keyboard input to show always above the Keyboard
+
+**Day 69** Today i needed to do a challenge to complete the Safari extension trying to make it save in userDefaults the scripts that the person created for every website.
