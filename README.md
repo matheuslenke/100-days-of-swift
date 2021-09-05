@@ -89,3 +89,5 @@ The - represents a 10pt spacing
 **Day 68** Today i finished the Safari extension, exhanging data between iOS and Javascript code, and handling keyboard input to show always above the Keyboard
 
 **Day 69** Today i needed to do a challenge to complete the Safari extension trying to make it save in userDefaults the scripts that the person created for every website.
+
+**Day 70** Today i started creating the Fireworks game with SpriteKit again, and how to create movement in different directions. It was quite simple, but it was just the first part
