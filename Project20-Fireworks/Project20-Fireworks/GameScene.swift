@@ -10,6 +10,9 @@ import SpriteKit
 class GameScene: SKScene {
     var gameTimer: Timer?
     var fireworks = [SKNode]()
+    var gameScore: SKLabelNode!
+    var totalLaunches = 0
+    let maximumLaunches = 30
     
     var leftEdge = -22
     var bottomEdge = -22
@@ -17,7 +20,7 @@ class GameScene: SKScene {
     
     var score = 0 {
         didSet {
-            // Score label
+            gameScore.text = "Score: \(score)"
         }
     }
     
@@ -27,6 +30,14 @@ class GameScene: SKScene {
         background.blendMode = .replace
         background.zPosition = -1
         addChild(background)
+        
+        gameScore = SKLabelNode(fontNamed: "Helvetica Neue")
+        gameScore.text = "Score: 0"
+        gameScore.position = CGPoint(x: rightEdge - 250, y: 50)
+        gameScore.horizontalAlignmentMode = .left
+        gameScore.zPosition = 101
+        gameScore.fontSize = 28
+        addChild(gameScore)
         
         gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(launchFireworks), userInfo: nil, repeats: true)
     }
@@ -65,8 +76,26 @@ class GameScene: SKScene {
         addChild(node)
     }
     
+    func restartGame() {
+        score = 0
+        gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(launchFireworks), userInfo: nil, repeats: true)
+        totalLaunches = 0
+    }
+    
     @objc func launchFireworks() {
         let movementAmount: CGFloat = 1800
+        totalLaunches += 1
+        
+        if totalLaunches >= maximumLaunches {
+            let ac = UIAlertController(title: "Game ended!", message: "Thank you for playing", preferredStyle: .alert)
+            gameTimer?.invalidate()
+            let restartAction = UIAlertAction(title: "Play again", style: .default) { [weak self] _ in
+                self?.restartGame()
+            }
+            ac.addAction(restartAction)
+            view?.window?.rootViewController?.present(ac, animated: true)
+            return
+        }
         
         switch Int.random(in: 0...3) {
         case 0:
@@ -137,6 +166,44 @@ class GameScene: SKScene {
                 fireworks.remove(at: index)
                 firework.removeFromParent()
             }
+        }
+    }
+    
+    func explode(firework: SKNode) {
+        if let emitter = SKEmitterNode(fileNamed: "explode") {
+            emitter.position = firework.position
+            addChild(emitter)
+        }
+        
+        firework.removeFromParent()
+    }
+    
+    func explodeFireworks() {
+        var numExploded = 0
+        
+        for (index, fireworkContainer) in fireworks.enumerated().reversed() {
+            guard let firework = fireworkContainer.children.first as? SKSpriteNode else { continue }
+            
+            if firework.name == "selected" {
+                explode(firework: fireworkContainer)
+                fireworks.remove(at: index)
+                numExploded += 1
+            }
+        }
+        
+        switch numExploded {
+        case 0:
+            break
+        case 1:
+            score += 200
+        case 2:
+            score += 500
+        case 3:
+            score += 1500
+        case 4:
+            score += 2500
+        default:
+            score += 4000
         }
     }
     
