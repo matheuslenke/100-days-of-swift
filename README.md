@@ -93,3 +93,5 @@ The - represents a 10pt spacing
 **Day 70** Today i started creating the Fireworks game with SpriteKit again, and how to create movement in different directions. It was quite simple, but it was just the first part
 
 **Day 71** Today i finished doing challenges in the Fireworks game with SpriteKit, making the game stop after some time and the user restart it if he wants
+
+**Day 72** Today i learned a little about notification, how to schedule it after user left my app, and how to deal with actions directly on the notification
