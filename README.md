@@ -95,3 +95,5 @@ The - represents a 10pt spacing
 **Day 71** Today i finished doing challenges in the Fireworks game with SpriteKit, making the game stop after some time and the user restart it if he wants
 
 **Day 72** Today i learned a little about notification, how to schedule it after user left my app, and how to deal with actions directly on the notification
+
+**Day 73** Today i made some challenges and started to understand more of notifications. I know it changed a lot in iOS 15, so i already know that i still need to study a lot about the new notification system

@@ -26,6 +26,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Asking for notification permission
+        registerLocal()
+        // Scheduling a daily notification
+        scheduleLocal()
         
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
@@ -109,3 +113,55 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController : UNUserNotificationCenterDelegate {
+    
+    @objc func registerLocal() {
+        let center = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
+            if granted {
+                print("Yuhuul")
+                self.scheduleLocal()
+            } else {
+                print("D'oh!")
+            }
+        }
+        
+    }
+    
+    
+    
+    @objc func scheduleLocal() {
+        registerCategories()
+        
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Let's play some games?"
+        content.body = "Let's play Flag Guesser! Sure you'll have a lot of fun"
+        content.categoryIdentifier = "alarm"
+        content.userInfo = ["customData": "fizzbuzz"]
+        content.sound = .default
+        
+//        Schedule to appear everyday
+        var dateComponents = DateComponents()
+        dateComponents.hour = 12
+        dateComponents.minute = 33
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
+        print("It worked")
+    }
+    
+    func registerCategories() {
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+        
+        let play = UNNotificationAction(identifier: "play", title: "Lets play!", options: .foreground)
+        let category = UNNotificationCategory(identifier: "alarm", actions: [play], intentIdentifiers: [], options: [])
+        
+        center.setNotificationCategories([category])
+    }
+}
