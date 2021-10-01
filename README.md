@@ -97,3 +97,8 @@ The - represents a 10pt spacing
 **Day 72** Today i learned a little about notification, how to schedule it after user left my app, and how to deal with actions directly on the notification
 
 **Day 73** Today i made some challenges and started to understand more of notifications. I know it changed a lot in iOS 15, so i already know that i still need to study a lot about the new notification system
+
+**Day 74** Today was consolidation day, and i'm proud to announce that i made a lot of progress. I took the challenge of recreating a basic version of Apple Notes, and made it work with Core Data based on some past projects that i tried. It works really nice and i'm really happy with the results. Here you can see a gif:
+<div style="align-items: center; display: flex; justify-content: center;">
+    <img src="Assets/ReviewProject7-AppleNotes.gif" height="600" />
+</div>
