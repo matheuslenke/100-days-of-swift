@@ -102,3 +102,5 @@ The - represents a 10pt spacing
 <div style="align-items: center; display: flex; justify-content: center;">
     <img src="Assets/ReviewProject7-AppleNotes.gif" height="600" />
 </div>
+
+**Day 75** Today i started using CoreLocation to locate Beacons, and change info in my app depending on how far the iPhone is from the Beacon. It was hard to test, because i don't have any Beacons nor more than one Apple device
