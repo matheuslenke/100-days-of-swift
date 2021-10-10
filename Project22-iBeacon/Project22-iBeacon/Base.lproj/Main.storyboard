@@ -22,15 +22,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvE-j9-dsv">
+                                <rect key="frame" x="186" y="791" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ga-gS-RVP">
+                                <rect key="frame" x="79" y="320" width="256" height="256"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="T1n-V6-drE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2e6-vD-oYL"/>
                             <constraint firstItem="T1n-V6-drE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ewz-jv-pMx"/>
+                            <constraint firstItem="5Ga-gS-RVP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nem-WL-eGw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZvE-j9-dsv" secondAttribute="bottom" constant="50" id="Q88-Mi-bf5"/>
+                            <constraint firstItem="ZvE-j9-dsv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lTT-Wa-cwh"/>
+                            <constraint firstItem="5Ga-gS-RVP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mj4-M3-HoC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="beaconName" destination="ZvE-j9-dsv" id="ZhV-1J-RaY"/>
+                        <outlet property="distanceCircle" destination="5Ga-gS-RVP" id="H27-ZR-fFg"/>
                         <outlet property="distanceReading" destination="T1n-V6-drE" id="zf3-HM-gAA"/>
                     </connections>
                 </viewController>
@@ -42,6 +58,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
