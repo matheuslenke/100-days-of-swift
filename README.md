@@ -104,3 +104,7 @@ The - represents a 10pt spacing
 </div>
 
 **Day 75** Today i started using CoreLocation to locate Beacons, and change info in my app depending on how far the iPhone is from the Beacon. It was hard to test, because i don't have any Beacons nor more than one Apple device
+
+**Day 76** I'm not quite sure it works, but i only have one device to test it, so maybe i'll get back there when i have another iDevice
+
+**Day 77** Today i started making a version of Fruit Ninja, and i think it'll be pretty good. Right now the only thing that works are the swipe effects, but i hope it will be good when finished
