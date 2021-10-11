@@ -108,3 +108,5 @@ The - represents a 10pt spacing
 **Day 76** I'm not quite sure it works, but i only have one device to test it, so maybe i'll get back there when i have another iDevice
 
 **Day 77** Today i started making a version of Fruit Ninja, and i think it'll be pretty good. Right now the only thing that works are the swipe effects, but i hope it will be good when finished
+
+**Day 78** Today i finished the game, and it's so fun. It's a lot of code, and maybe there is a good way to refactor it in different classes, but thats a challenge for the future. 
