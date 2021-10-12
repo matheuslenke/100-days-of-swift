@@ -17,6 +17,10 @@ enum SequenceType: CaseIterable {
     case oneNoBomb, one, twoWithOneBomb, two, three, four, chain, fastChain
 }
 
+enum EnemyType: CaseIterable {
+    case bomb, penguin1 ,penguin2, penguin3, penguin4, penguin5, duck
+}
+
 class GameScene: SKScene {
     
     var gameScore: SKLabelNode!
@@ -72,6 +76,7 @@ class GameScene: SKScene {
             [weak self] in
             self?.tossEnemies()
         }
+
     }
     
     func createScore() {
@@ -148,6 +153,29 @@ class GameScene: SKScene {
                     activeEnemies.remove(at: index)
                 }
                 run(SKAction.playSoundFileNamed("whack.caf", waitForCompletion: false))
+            } else if node.name == "duckEnemy" {
+                // Destroy the penguin
+                if let emitter = SKEmitterNode(fileNamed: "sliceHitEnemy") {
+                    emitter.position = node.position
+                    addChild(emitter)
+                }
+                
+                node.name = ""
+                node.physicsBody?.isDynamic = false
+                
+                let scaleOut = SKAction.scale(to: 0.001, duration: 0.2)
+                let fadeOut = SKAction.fadeOut(withDuration: 0.2)
+                let group = SKAction.group([scaleOut, fadeOut])
+                
+                let seq = SKAction.sequence([group, .removeFromParent()])
+                node.run(seq)
+                
+                score += 5
+                
+                if let index = activeEnemies.firstIndex(of: node) {
+                    activeEnemies.remove(at: index)
+                }
+                run(SKAction.playSoundFileNamed("quack.mp3", waitForCompletion: false))
             } else if node.name == "bomb" {
                 guard let bombContainer = node.parent as? SKSpriteNode else { continue }
                 
@@ -191,6 +219,10 @@ class GameScene: SKScene {
             livesImages[1].texture = SKTexture(imageNamed: "sliceLifeGone")
             livesImages[2].texture = SKTexture(imageNamed: "sliceLifeGone")
         }
+        let transition = SKTransition.fade(with: .red, duration: 1)
+        let gameOverScene = GameOverScene(size: CGSize(width: 1024, height: 768))
+        
+        scene?.view?.presentScene(gameOverScene, transition: transition)
     }
     
     func playSwooshSound() {
@@ -252,15 +284,15 @@ class GameScene: SKScene {
     func createEnemy(forceBomb: ForceBomb = .random) {
         let enemy: SKSpriteNode
         
-        var enemyType = Int.random(in: 0...6)
+        var enemyType = EnemyType.allCases.randomElement()
         
         if forceBomb == .never {
-            enemyType = 1
+            enemyType = EnemyType.penguin1
         } else if forceBomb == .always {
-            enemyType = 0
+            enemyType = EnemyType.bomb
         }
         
-        if enemyType == 0 {
+        if enemyType == EnemyType.bomb {
             enemy = SKSpriteNode()
             enemy.zPosition = 1
             enemy.name = "bombContainer"
@@ -285,6 +317,10 @@ class GameScene: SKScene {
                 emitter.position = CGPoint(x: 76, y: 64)
             }
             
+        } else if enemyType == EnemyType.duck {
+            enemy = SKSpriteNode(imageNamed: "duck")
+            run(SKAction.playSoundFileNamed("launch.caf", waitForCompletion: false))
+            enemy.name = "duckEnemy"
         } else {
             enemy = SKSpriteNode(imageNamed: "penguin")
             run(SKAction.playSoundFileNamed("launch.caf", waitForCompletion: false))
@@ -313,6 +349,11 @@ class GameScene: SKScene {
         enemy.physicsBody?.velocity = CGVector(dx: randomXVelocity * 40, dy: randomYVelocity * 40)
         enemy.physicsBody?.angularVelocity = randomAngularVelocity
         enemy.physicsBody?.collisionBitMask = 0
+        
+        if enemy.name == "duckEnemy" {
+            enemy.physicsBody?.velocity = CGVector(dx: randomXVelocity * 45, dy: randomYVelocity * 45)
+            enemy.physicsBody?.angularVelocity = randomAngularVelocity * 3
+        }
         
         addChild(enemy)
         activeEnemies.append(enemy)
@@ -349,6 +390,11 @@ class GameScene: SKScene {
                     if node.name == "enemy" {
                         node.name = ""
                         subtractLife()
+                        
+                        node.removeFromParent()
+                        activeEnemies.remove(at: index)
+                    } else if node.name == "duckEnemy" {
+                        node.name = ""
                         
                         node.removeFromParent()
                         activeEnemies.remove(at: index)

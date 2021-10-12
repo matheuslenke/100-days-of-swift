@@ -25,6 +25,9 @@
 		F86744142713674800F689E9 /* sliceHitEnemy.sks in Resources */ = {isa = PBXBuildFile; fileRef = F86744092713674800F689E9 /* sliceHitEnemy.sks */; };
 		F86744152713674800F689E9 /* launch.caf in Resources */ = {isa = PBXBuildFile; fileRef = F867440A2713674800F689E9 /* launch.caf */; };
 		F86744162713674800F689E9 /* explosion.caf in Resources */ = {isa = PBXBuildFile; fileRef = F867440B2713674800F689E9 /* explosion.caf */; };
+		F8D2CF1B2715E92200415569 /* quack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8D2CF1A2715E92200415569 /* quack.mp3 */; };
+		F8D2CF1D2715EAD300415569 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8D2CF1C2715EAD300415569 /* GameOverScene.sks */; };
+		F8D2CF1F2715EB1100415569 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D2CF1E2715EB1100415569 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		F86744092713674800F689E9 /* sliceHitEnemy.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sliceHitEnemy.sks; sourceTree = "<group>"; };
 		F867440A2713674800F689E9 /* launch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = launch.caf; sourceTree = "<group>"; };
 		F867440B2713674800F689E9 /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = explosion.caf; sourceTree = "<group>"; };
+		F8D2CF1A2715E92200415569 /* quack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quack.mp3; sourceTree = "<group>"; };
+		F8D2CF1C2715EAD300415569 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		F8D2CF1E2715EB1100415569 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,8 @@
 				F86743EA271366D800F689E9 /* AppDelegate.swift */,
 				F86743EC271366D800F689E9 /* GameScene.sks */,
 				F86743F0271366D800F689E9 /* GameScene.swift */,
+				F8D2CF1E2715EB1100415569 /* GameOverScene.swift */,
+				F8D2CF1C2715EAD300415569 /* GameOverScene.sks */,
 				F86743F2271366D800F689E9 /* GameViewController.swift */,
 				F86743F4271366D800F689E9 /* Main.storyboard */,
 				F86743F7271366D900F689E9 /* Assets.xcassets */,
@@ -97,6 +105,7 @@
 				F86744082713674800F689E9 /* swoosh3.caf */,
 				F86744052713674800F689E9 /* whack.caf */,
 				F86744032713674800F689E9 /* wrong.caf */,
+				F8D2CF1A2715E92200415569 /* quack.mp3 */,
 			);
 			path = "Project23-FruitNinja";
 			sourceTree = "<group>";
@@ -166,11 +175,13 @@
 				F86743F6271366D800F689E9 /* Main.storyboard in Resources */,
 				F86744102713674800F689E9 /* whack.caf in Resources */,
 				F86744132713674800F689E9 /* swoosh3.caf in Resources */,
+				F8D2CF1D2715EAD300415569 /* GameOverScene.sks in Resources */,
 				F867440C2713674800F689E9 /* swoosh1.caf in Resources */,
 				F86743ED271366D800F689E9 /* GameScene.sks in Resources */,
 				F86744142713674800F689E9 /* sliceHitEnemy.sks in Resources */,
 				F867440F2713674800F689E9 /* sliceHitBomb.sks in Resources */,
 				F86743F8271366D900F689E9 /* Assets.xcassets in Resources */,
+				F8D2CF1B2715E92200415569 /* quack.mp3 in Resources */,
 				F86744162713674800F689E9 /* explosion.caf in Resources */,
 				F86743FB271366D900F689E9 /* LaunchScreen.storyboard in Resources */,
 				F867440D2713674800F689E9 /* sliceFuse.sks in Resources */,
@@ -186,6 +197,7 @@
 			files = (
 				F86743F1271366D800F689E9 /* GameScene.swift in Sources */,
 				F86743F3271366D800F689E9 /* GameViewController.swift in Sources */,
+				F8D2CF1F2715EB1100415569 /* GameOverScene.swift in Sources */,
 				F86743EB271366D800F689E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
