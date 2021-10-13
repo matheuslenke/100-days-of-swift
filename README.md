@@ -116,3 +116,5 @@ The - represents a 10pt spacing
 <div style="align-items: center; display: flex; justify-content: center;">
     <img src="Assets/Project23-FruitNinja.gif" height="600" />
 </div>
+
+**Day 80** Today was a simple project, showing more about how to manipulate strings in Swift. I learned about NSAttributesString and NSMutableAttributedString and some of it's methods, and also how to create some extension methods to the String class
