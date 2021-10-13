@@ -118,3 +118,5 @@ The - represents a 10pt spacing
 </div>
 
 **Day 80** Today was a simple project, showing more about how to manipulate strings in Swift. I learned about NSAttributesString and NSMutableAttributedString and some of it's methods, and also how to create some extension methods to the String class
+
+**Day 81** Today i made some challenges with strings, creating my own extension methods. It was nice to practice it's methods a little

@@ -9,7 +9,7 @@ for letter in name {
 let letter = name[name.index(name.startIndex, offsetBy: 3)]
 
 extension String {
-    // Special value that re
+    // Receives a value like [3] in an array
     subscript(i: Int) -> String {
         return String(self[index(startIndex, offsetBy: 1)])
     }
@@ -90,3 +90,64 @@ attributedString2.addAttribute(.font, value: UIFont.systemFont(ofSize: 32), rang
 attributedString2.addAttribute(.font, value: UIFont.systemFont(ofSize: 40), range: NSRange(location: 15, length: 6))
 
 
+// <--- Challenges --->
+
+// Challenge 1
+
+extension String {
+    func withPrefix(_ prefix: String) -> String {
+        if self.hasPrefix(prefix) {
+            return self
+        }
+        else {
+            return prefix.appending(self);
+        }
+    }
+}
+
+"pet".withPrefix("car")
+"carpet".withPrefix("car")
+
+
+// Challenge 2
+
+extension String {
+    func isNumeric() -> Bool {
+        if let _ = Double(self) {
+            return true
+        }
+        return false
+    }
+}
+
+"123.".isNumeric()
+"two".isNumeric()
+
+// Challenge 3
+
+extension String {
+    var lines: [String] {
+        var linesArray = [String]()
+        var line = String()
+        let totalLetters = self.count
+        var i = 1
+        
+        for letter in self {
+            if letter == "\n"  {
+                linesArray.append(line)
+                line = ""
+                i += 1
+            } else if i == totalLetters {
+                line.append(letter)
+                linesArray.append(line)
+            } else {
+                i += 1
+                line.append(letter)
+            }
+        }
+        print(i)
+        return linesArray
+    }
+}
+
+"this\nis\na\ntest".lines
