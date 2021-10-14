@@ -120,3 +120,5 @@ The - represents a 10pt spacing
 **Day 80** Today was a simple project, showing more about how to manipulate strings in Swift. I learned about NSAttributesString and NSMutableAttributedString and some of it's methods, and also how to create some extension methods to the String class
 
 **Day 81** Today i made some challenges with strings, creating my own extension methods. It was nice to practice it's methods a little
+
+**Day 82** Today i made a challenge to review some contents. I made an extension to UIView to execute a custom animation, in Int to have a custom method that receives a closure, and in Array with Comparable elements to remove an item from array receiving a element rather than an index
