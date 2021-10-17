@@ -124,3 +124,5 @@ The - represents a 10pt spacing
 **Day 82** Today i made a challenge to review some contents. I made an extension to UIView to execute a custom animation, in Int to have a custom method that receives a closure, and in Array with Comparable elements to remove an item from array receiving a element rather than an index
 
 **Day 83** Today i made an App that connects with P2P and users can share photos. It didn't work exactly like the tutorial, and i found that the permissions to network access in iOS changed in newest versions, so i just updated following what i've found on internet and it worked!
+
+**Day 84** Today was a challenge day and i made more buttons, one to send text instead of pictures, and another to list all connected users in the P2P connection
