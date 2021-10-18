@@ -126,3 +126,5 @@ The - represents a 10pt spacing
 **Day 83** Today i made an App that connects with P2P and users can share photos. It didn't work exactly like the tutorial, and i found that the permissions to network access in iOS changed in newest versions, so i just updated following what i've found on internet and it worked!
 
 **Day 84** Today was a challenge day and i made more buttons, one to send text instead of pictures, and another to list all connected users in the P2P connection
+
+**Day 85** Today i started developing a labyrinth for iPad that will use the gyroscope. I only created the level and managed the sprites
