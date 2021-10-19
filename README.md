@@ -128,3 +128,5 @@ The - represents a 10pt spacing
 **Day 84** Today was a challenge day and i made more buttons, one to send text instead of pictures, and another to list all connected users in the P2P connection
 
 **Day 85** Today i started developing a labyrinth for iPad that will use the gyroscope. I only created the level and managed the sprites
+
+**Day 86** Today i finished the game, working with the gyroscope to move the player, and also making some animations and working with collisions. I also learned about an if that the compiler do some changes depending on the running environment, running some code for the device, and a different one for the simulator, that doesn't have a gyroscope
