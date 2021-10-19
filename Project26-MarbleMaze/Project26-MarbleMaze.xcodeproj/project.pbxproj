@@ -14,7 +14,9 @@
 		F8F3A8B3271C88AF00584255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F3A8B1271C88AF00584255 /* Main.storyboard */; };
 		F8F3A8B5271C88B100584255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F3A8B4271C88B100584255 /* Assets.xcassets */; };
 		F8F3A8B8271C88B100584255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F3A8B6271C88B100584255 /* LaunchScreen.storyboard */; };
-		F8F3A8BF271C891400584255 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = F8F3A8BE271C891400584255 /* level1.txt */; };
+		F8F3A8C2271F087B00584255 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = F8F3A8C1271F087B00584255 /* level2.txt */; };
+		F8F3A8C4271F0B3E00584255 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = F8F3A8C3271F0B3E00584255 /* level1.txt */; };
+		F8F3A8C6271F104300584255 /* Teleport.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8F3A8C5271F104300584255 /* Teleport.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +28,9 @@
 		F8F3A8B2271C88AF00584255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8F3A8B4271C88B100584255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8F3A8B7271C88B100584255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F8F3A8BE271C891400584255 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		F8F3A8C1271F087B00584255 /* level2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
+		F8F3A8C3271F0B3E00584255 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		F8F3A8C5271F104300584255 /* Teleport.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Teleport.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				F8F3A8C0271C891B00584255 /* Levels */,
 				F8F3A8B4271C88B100584255 /* Assets.xcassets */,
 				F8F3A8B6271C88B100584255 /* LaunchScreen.storyboard */,
+				F8F3A8C5271F104300584255 /* Teleport.sks */,
 			);
 			path = "Project26-MarbleMaze";
 			sourceTree = "<group>";
@@ -74,7 +79,8 @@
 		F8F3A8C0271C891B00584255 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
-				F8F3A8BE271C891400584255 /* level1.txt */,
+				F8F3A8C3271F0B3E00584255 /* level1.txt */,
+				F8F3A8C1271F087B00584255 /* level2.txt */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -137,11 +143,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8F3A8BF271C891400584255 /* level1.txt in Resources */,
 				F8F3A8B3271C88AF00584255 /* Main.storyboard in Resources */,
+				F8F3A8C2271F087B00584255 /* level2.txt in Resources */,
 				F8F3A8AA271C88AF00584255 /* GameScene.sks in Resources */,
+				F8F3A8C4271F0B3E00584255 /* level1.txt in Resources */,
 				F8F3A8B5271C88B100584255 /* Assets.xcassets in Resources */,
 				F8F3A8B8271C88B100584255 /* LaunchScreen.storyboard in Resources */,
+				F8F3A8C6271F104300584255 /* Teleport.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +316,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -336,6 +345,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
