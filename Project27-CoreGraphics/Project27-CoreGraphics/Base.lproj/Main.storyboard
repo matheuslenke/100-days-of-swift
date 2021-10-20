@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project27_CoreGraphics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BNU-kI-tm8">
+                                <rect key="frame" x="0.0" y="-20" width="1180" height="860"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuz-p9-w0I">
+                                <rect key="frame" x="171" y="831" width="73" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Redraw"/>
+                                <connections>
+                                    <action selector="redrawTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WrA-U5-8VM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BNU-kI-tm8" firstAttribute="centerX" secondItem="Iuz-p9-w0I" secondAttribute="centerX" id="0Dy-vy-PgV"/>
+                            <constraint firstItem="BNU-kI-tm8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DTv-1B-QmA"/>
+                            <constraint firstItem="Iuz-p9-w0I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="171" id="Lwz-0d-BQr"/>
+                            <constraint firstAttribute="bottom" secondItem="BNU-kI-tm8" secondAttribute="bottom" id="Nqa-Nc-CnL"/>
+                            <constraint firstItem="BNU-kI-tm8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y4A-6O-xyw"/>
+                            <constraint firstItem="Iuz-p9-w0I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cft-IE-ZIE"/>
+                            <constraint firstItem="BNU-kI-tm8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ibC-XG-6M7"/>
+                            <constraint firstItem="BNU-kI-tm8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="ojc-Uq-CmH"/>
+                            <constraint firstItem="BNU-kI-tm8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rq7-Lw-VqJ"/>
+                            <constraint firstItem="BNU-kI-tm8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wxb-gJ-gIR"/>
+                            <constraint firstAttribute="trailing" secondItem="BNU-kI-tm8" secondAttribute="trailing" id="ykt-LF-VLn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="BNU-kI-tm8" id="QNl-eZ-8yb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.69491525423729" y="109.7560975609756"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -136,3 +136,9 @@ The - represents a 10pt spacing
 <div style="align-items: center; display: flex; justify-content: center;">
     <img src="Assets/Project26-MarbleMaze.gif" height="600" />
 </div>
+
+**Day 88** Today i started learning how to draw some figures using CoreGraphics and UIKit, here are the results:
+
+<div style="align-items: center; display: flex; justify-content: center;">
+    <img src="Assets/Project27-CoreGraphics.gif" height="600" />
+</div>
