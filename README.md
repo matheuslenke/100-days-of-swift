@@ -142,3 +142,5 @@ The - represents a 10pt spacing
 <div style="align-items: center; display: flex; justify-content: center;">
     <img src="Assets/Project27-CoreGraphics.gif" height="600" />
 </div>
+
+**Day 89** Today i made some new shapes, it was really hard to mimic an emoji. They have so many complex shaped mixed up together

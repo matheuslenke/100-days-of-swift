@@ -53,6 +53,7 @@ class ViewController: UITableViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
     @objc func shareTapped() {
         let sharingText = "I loved this app!! check it out on link"
         let vc = UIActivityViewController(activityItems: [sharingText], applicationActivities: [])
