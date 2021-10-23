@@ -144,3 +144,5 @@ The - represents a 10pt spacing
 </div>
 
 **Day 89** Today i made some new shapes, it was really hard to mimic an emoji. They have so many complex shaped mixed up together
+
+**Day 90** Today i made a challenge and created my own meme generator, and i learned a lot more about CoreGraphics when trying new things on how to render on different sizes of images

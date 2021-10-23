@@ -58,25 +58,17 @@ class DetailViewController: UIViewController {
             paragraphStyle.alignment = .center
             
             let attrs: [NSAttributedString.Key: Any] = [
-                .font: UIFont.systemFont(ofSize: 24),
+                .font: UIFont.systemFont(ofSize: 16),
                 .paragraphStyle: paragraphStyle,
-                .foregroundColor: UIColor.black
+                .foregroundColor: UIColor.white,
+                .strokeColor: UIColor.black,
+                .strokeWidth: -2
             ]
            
             let string = "From Storm Viewer"
             ctx.cgContext.setFillColor(UIColor.black.cgColor)
             let attributedString = NSAttributedString(string: string, attributes: attrs)
             attributedString.draw(with: CGRect(x: 5, y: 5, width: 200, height: 200), options: .usesLineFragmentOrigin, context: nil)
-            
-            // Writing with white
-            let attrsSmall: [NSAttributedString.Key: Any] = [
-                .font: UIFont.systemFont(ofSize: 23),
-                .paragraphStyle: paragraphStyle,
-                .foregroundColor: UIColor.white
-            ]
-            let attributedStringWhite = NSAttributedString(string: string, attributes: attrsSmall)
-           
-            attributedStringWhite.draw(with: CGRect(x: 5, y: 5, width: 200, height: 200), options: .usesLineFragmentOrigin, context: nil)
         }
         guard let newImageData = newImage.pngData() else { return }
         let vc = UIActivityViewController(activityItems: [newImageData , imageName], applicationActivities: [])
