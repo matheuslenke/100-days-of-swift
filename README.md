@@ -148,3 +148,5 @@ The - represents a 10pt spacing
 **Day 90** Today i made a challenge and created my own meme generator, and i learned a lot more about CoreGraphics when trying new things on how to render on different sizes of images
 
 **Day 91** Today i made a Swift playgrounds of CoreGraphics, and i wish i had made this before the challenges. The thing is, now because i had a hard time with it, it's easier to remember 
+
+**Day 92** Today i learned how to use Biometry Authentication and how to use the Keychain using a third party library that abstract some of the work to do it
