@@ -15,6 +15,8 @@
 		F8751C3D26AC3F6D00B30D8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8751C3B26AC3F6D00B30D8D /* LaunchScreen.storyboard */; };
 		F8751C4526AC414200B30D8D /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8751C4426AC414200B30D8D /* PersonCell.swift */; };
 		F8751C4726AC62EF00B30D8D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8751C4626AC62EF00B30D8D /* Person.swift */; };
+		F8E026652725A456004D61E4 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E026632725A456004D61E4 /* KeychainItemAccessibility.swift */; };
+		F8E026662725A456004D61E4 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E026642725A456004D61E4 /* KeychainWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		F8751C3E26AC3F6D00B30D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8751C4426AC414200B30D8D /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		F8751C4626AC62EF00B30D8D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		F8E026632725A456004D61E4 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		F8E026642725A456004D61E4 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				F8751C3926AC3F6D00B30D8D /* Assets.xcassets */,
 				F8751C3B26AC3F6D00B30D8D /* LaunchScreen.storyboard */,
 				F8751C3E26AC3F6D00B30D8D /* Info.plist */,
+				F8E026632725A456004D61E4 /* KeychainItemAccessibility.swift */,
+				F8E026642725A456004D61E4 /* KeychainWrapper.swift */,
 			);
 			path = "Project10-PeopleNames";
 			sourceTree = "<group>";
@@ -146,8 +152,10 @@
 				F8751C4726AC62EF00B30D8D /* Person.swift in Sources */,
 				F8751C3526AC3F6900B30D8D /* ViewController.swift in Sources */,
 				F8751C3126AC3F6900B30D8D /* AppDelegate.swift in Sources */,
+				F8E026662725A456004D61E4 /* KeychainWrapper.swift in Sources */,
 				F8751C4526AC414200B30D8D /* PersonCell.swift in Sources */,
 				F8751C3326AC3F6900B30D8D /* SceneDelegate.swift in Sources */,
+				F8E026652725A456004D61E4 /* KeychainItemAccessibility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

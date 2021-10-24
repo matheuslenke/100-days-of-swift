@@ -150,3 +150,5 @@ The - represents a 10pt spacing
 **Day 91** Today i made a Swift playgrounds of CoreGraphics, and i wish i had made this before the challenges. The thing is, now because i had a hard time with it, it's easier to remember 
 
 **Day 92** Today i learned how to use Biometry Authentication and how to use the Keychain using a third party library that abstract some of the work to do it
+
+**Day 93** Today i made a challenge implementing more stuff using Biometry authentication and storing data at the Keychain using the KeychainWrapper
