@@ -154,3 +154,5 @@ The - represents a 10pt spacing
 **Day 93** Today i made a challenge implementing more stuff using Biometry authentication and storing data at the Keychain using the KeychainWrapper
 
 **Day 94** Today i started doing another SpriteKit Game, and mixing it with UIKit. It's not playable yet
+
+**Day 95** Today i finished the game. It looked really nice, and is actually fun. I can think of some improvements, but the most awesome thing i learned was how to change a texture using CoreGraphics to make holes at buildings and changing its physics body
