@@ -152,3 +152,5 @@ The - represents a 10pt spacing
 **Day 92** Today i learned how to use Biometry Authentication and how to use the Keychain using a third party library that abstract some of the work to do it
 
 **Day 93** Today i made a challenge implementing more stuff using Biometry authentication and storing data at the Keychain using the KeychainWrapper
+
+**Day 94** Today i started doing another SpriteKit Game, and mixing it with UIKit. It's not playable yet
