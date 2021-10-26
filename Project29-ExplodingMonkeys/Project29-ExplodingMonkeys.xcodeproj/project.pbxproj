@@ -17,6 +17,9 @@
 		F8339C4A2726D02200BB3CE3 /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8339C492726D02200BB3CE3 /* BuildingNode.swift */; };
 		F8339C4D2726E22900BB3CE3 /* hitPlayer.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8339C4B2726E22900BB3CE3 /* hitPlayer.sks */; };
 		F8339C4E2726E22900BB3CE3 /* hitBuilding.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8339C4C2726E22900BB3CE3 /* hitBuilding.sks */; };
+		F87393232728707700F21929 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F87393222728707700F21929 /* GameOverScene.sks */; };
+		F8739325272870A000F21929 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8739324272870A000F21929 /* GameOverScene.swift */; };
+		F8739327272887EB00F21929 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8739326272887EB00F21929 /* Wind.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		F8339C492726D02200BB3CE3 /* BuildingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
 		F8339C4B2726E22900BB3CE3 /* hitPlayer.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitPlayer.sks; sourceTree = "<group>"; };
 		F8339C4C2726E22900BB3CE3 /* hitBuilding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitBuilding.sks; sourceTree = "<group>"; };
+		F87393222728707700F21929 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		F8739324272870A000F21929 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		F8739326272887EB00F21929 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +72,11 @@
 				F8339C322726CF8D00BB3CE3 /* AppDelegate.swift */,
 				F8339C342726CF8D00BB3CE3 /* GameScene.sks */,
 				F8339C382726CF8D00BB3CE3 /* GameScene.swift */,
+				F87393222728707700F21929 /* GameOverScene.sks */,
+				F8739324272870A000F21929 /* GameOverScene.swift */,
 				F8339C492726D02200BB3CE3 /* BuildingNode.swift */,
 				F8339C3A2726CF8D00BB3CE3 /* GameViewController.swift */,
+				F8739326272887EB00F21929 /* Wind.swift */,
 				F8339C3C2726CF8D00BB3CE3 /* Main.storyboard */,
 				F8339C3F2726CF8F00BB3CE3 /* Assets.xcassets */,
 				F8339C412726CF8F00BB3CE3 /* LaunchScreen.storyboard */,
@@ -136,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8339C3E2726CF8D00BB3CE3 /* Main.storyboard in Resources */,
+				F87393232728707700F21929 /* GameOverScene.sks in Resources */,
 				F8339C352726CF8D00BB3CE3 /* GameScene.sks in Resources */,
 				F8339C4D2726E22900BB3CE3 /* hitPlayer.sks in Resources */,
 				F8339C402726CF8F00BB3CE3 /* Assets.xcassets in Resources */,
@@ -151,10 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8739325272870A000F21929 /* GameOverScene.swift in Sources */,
 				F8339C392726CF8D00BB3CE3 /* GameScene.swift in Sources */,
 				F8339C4A2726D02200BB3CE3 /* BuildingNode.swift in Sources */,
 				F8339C3B2726CF8D00BB3CE3 /* GameViewController.swift in Sources */,
 				F8339C332726CF8D00BB3CE3 /* AppDelegate.swift in Sources */,
+				F8739327272887EB00F21929 /* Wind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

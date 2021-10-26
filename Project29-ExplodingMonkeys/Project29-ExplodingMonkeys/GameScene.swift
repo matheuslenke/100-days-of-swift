@@ -23,6 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var banana: SKSpriteNode!
     
     var currentPlayer = 1
+    var currentWind: Wind?
     
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
@@ -30,6 +31,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createPlayers()
         
         physicsWorld.contactDelegate = self
+        changeWind()
+    }
+    
+    func changeWind() {
+        currentWind = Wind.getRandomWind()
+        if let text = currentWind?.getText() {
+            DispatchQueue.main.async {
+                self.viewController?.windLabel.attributedText = text
+            }
+        }
+        
+        if let gravity =  currentWind?.getGravity(player: currentPlayer) {
+            physicsWorld.gravity = gravity
+        }
     }
     
     func createBuildings() {
@@ -143,10 +158,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         if firstNode.name == "banana" && secondNode.name == "player1" {
-            destroy(player: player1)
+            destroy(playerNode: player1, of: .one)
         }
         if firstNode.name == "banana" && secondNode.name == "player2" {
-            destroy(player: player2)
+            destroy(playerNode: player2, of: .two)
         }
     }
     
@@ -167,25 +182,44 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         changePlayer()
     }
     
-    func destroy(player: SKSpriteNode ) {
+    func destroy(playerNode: SKSpriteNode, of player: Player ) {
         if let explosion = SKEmitterNode(fileNamed: "hitPlayer") {
-            explosion.position = player.position
+            explosion.position = playerNode.position
             addChild(explosion)
         }
         
-        player.removeFromParent()
+        playerNode.removeFromParent()
         banana.removeFromParent()
         
+        if player == .one {
+            viewController?.increaseScoreOf(player: .two)
+        } else {
+            viewController?.increaseScoreOf(player: .one)
+        }
+        
+        
+
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let newGame = GameScene(size: self.size)
-            newGame.viewController = self.viewController
-            self.viewController?.currentGame = newGame
-            
-            self.changePlayer()
-            newGame.currentPlayer = self.currentPlayer
-            
-            let transition = SKTransition.doorway(withDuration: 1.5)
-            self.view?.presentScene(newGame, transition: transition)
+            if self.viewController?.getScore(of: .two) == 3 {
+                self.viewController?.deactivateLabels()
+                self.viewController?.restartGame()
+                self.gameEnded(withWinner: .two)
+            } else if self.viewController?.getScore(of: .one) == 3 {
+                self.viewController?.deactivateLabels()
+                self.viewController?.restartGame()
+                self.gameEnded(withWinner: .one)
+            } else {
+                let newGame = GameScene(size: self.size)
+                newGame.viewController = self.viewController
+                self.viewController?.currentGame = newGame
+                
+                self.changePlayer()
+                newGame.currentPlayer = self.currentPlayer
+                
+                let transition = SKTransition.doorway(withDuration: 1.5)
+                self.view?.presentScene(newGame, transition: transition)
+            }
         }
     }
     
@@ -197,6 +231,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         viewController?.activatePlayer(number: currentPlayer)
+        changeWind()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -206,6 +241,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             banana.removeFromParent()
             banana = nil
             changePlayer()
+        }
+    }
+    
+    func gameEnded(withWinner: Player) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let gameOver = gameOverScene(size: self.size)
+            gameOver.playerWhoWins = withWinner
+            gameOver.viewController = self.viewController
+            
+            let transition = SKTransition.fade(withDuration: 0.5)
+            self.view?.presentScene(gameOver, transition: transition)
         }
     }
 }
