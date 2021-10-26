@@ -158,3 +158,5 @@ The - represents a 10pt spacing
 **Day 95** Today i finished the game. It looked really nice, and is actually fun. I can think of some improvements, but the most awesome thing i learned was how to change a texture using CoreGraphics to make holes at buildings and changing its physics body
 
 **Day 96** Today i made a challenge in my last SpriteKit Game, i made a wind modifier, tracked player score, used Scene transitions and used auto layout for the UI components. The final version remind me a little of Gunbound
+
+**Day 97** Today i made no app, but learned how to use Instruments to debug performance issues in my code, looking at unnecessary allocations and other stuff like rendering big images in really small places, that costs a lot to iOS to move between all those pixels
