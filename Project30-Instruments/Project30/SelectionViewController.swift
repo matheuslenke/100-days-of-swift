@@ -10,8 +10,8 @@ import UIKit
 
 class SelectionViewController: UITableViewController {
 	var items = [String]() // this is the array that will store the filenames to load
-	var viewControllers = [UIViewController]() // create a cache of the detail view controllers for faster loading
 	var dirty = false
+    var images = [UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +22,8 @@ class SelectionViewController: UITableViewController {
 		tableView.separatorStyle = .none
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
-		// load all the JPEGs into our array
-		let fm = FileManager.default
-
-		if let tempItems = try? fm.contentsOfDirectory(atPath: Bundle.main.resourcePath!) {
-			for item in tempItems {
-				if item.range(of: "Large") != nil {
-					items.append(item)
-				}
-			}
-		}
+        
+        loadImages()
     }
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -69,11 +61,9 @@ class SelectionViewController: UITableViewController {
         
 		// find the image for this cell, and load its thumbnail
 		let currentImage = items[indexPath.row % items.count]
-		let imageRootName = currentImage.replacingOccurrences(of: "Large", with: "Thumb")
-		let path = Bundle.main.path(forResource: imageRootName, ofType: nil)!
-		let original = UIImage(contentsOfFile: path)!
+        let original = images[indexPath.row % items.count]
 
-        let renderRect = CGRect(origin: .zero, size: CGSize(width: 90, height: 90))
+        let renderRect = CGRect(origin: .zero, size: CGSize(width: 60, height: 60))
 		let renderer = UIGraphicsImageRenderer(size: renderRect.size)
 
 		let rounded = renderer.image { ctx in
@@ -101,6 +91,53 @@ class SelectionViewController: UITableViewController {
 
 		return cell
     }
+    
+    func loadImages() {
+        // load all the JPEGs into our array
+        let fm = FileManager.default
+        if let resourcePath = Bundle.main.resourcePath {
+            if let tmpItems = try? fm.contentsOfDirectory(atPath: resourcePath) {
+                for item in tmpItems {
+                    if item.range(of: "Large") != nil {
+                        items.append(item)
+                        
+                        if let image = saveToCache(name: item) {
+                            images.append(image)
+                        } else {
+                            if let thumbnail = createThumbnail(imageName: item) {
+                                images.append(thumbnail)
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+    }
+    
+    func createThumbnail(imageName: String) -> UIImage? {
+        // Get the thumbnail image file name
+        let imageRootName = imageName.replacingOccurrences(of: "Large", with: "Thumb")
+        
+        // Load it's path
+        guard let path = Bundle.main.path(forResource: imageRootName, ofType: nil) else { fatalError("Couldn't get Path") }
+        guard let original = UIImage(contentsOfFile: path) else { fatalError("Couldn't create UIImage") }
+        
+        // scale down the image to save it into cache
+          let renderRect = CGRect(origin: .zero, size: CGSize(width: 60, height: 60))
+          let renderer = UIGraphicsImageRenderer(size: renderRect.size)
+          
+          let rounded = renderer.image { ctx in
+              ctx.cgContext.addEllipse(in: renderRect)
+              ctx.cgContext.clip()
+              
+              original.draw(in: renderRect)
+          }
+          
+          saveToCache(name: imageName, image: rounded)
+          return rounded
+    }
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let vc = ImageViewController()
@@ -110,8 +147,26 @@ class SelectionViewController: UITableViewController {
 		// mark us as not needing a counter reload when we return
 		dirty = false
 
-		// add to our view controller cache and show
-		viewControllers.append(vc)
 		navigationController!.pushViewController(vc, animated: true)
 	}
+    
+    // challenge 3
+    func saveToCache(name: String) -> UIImage? {
+        let path = getDocumentsDirectory().appendingPathComponent(name)
+        return UIImage(contentsOfFile: path.path)
+    }
+    
+    func saveToCache(name: String, image: UIImage) {
+        let imagePath = getDocumentsDirectory().appendingPathComponent(name)
+        if let pngData = image.pngData() {
+            try? pngData.write(to: imagePath)
+        }
+    }
+    
+    // challenge 3
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
 }

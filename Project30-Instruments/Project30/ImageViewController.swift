@@ -9,11 +9,11 @@
 import UIKit
 
 class ImageViewController: UIViewController {
-	var owner: SelectionViewController!
-	var image: String!
-	var animTimer: Timer!
+	weak var owner: SelectionViewController?
+	var image: String?
+	var animTimer: Timer?
 
-	var imageView: UIImageView!
+	var imageView: UIImageView?
 
 	override func loadView() {
 		super.loadView()
@@ -22,11 +22,12 @@ class ImageViewController: UIViewController {
 
 		// create an image view that fills the screen
 		imageView = UIImageView()
+        guard let imageView = imageView else { return }
 		imageView.contentMode = .scaleAspectFit
 		imageView.translatesAutoresizingMaskIntoConstraints = false
 		imageView.alpha = 0
-
-		view.addSubview(imageView)
+        
+        view.addSubview(imageView)
 
 		// make the image view fill the screen
 		imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -35,12 +36,12 @@ class ImageViewController: UIViewController {
 		imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
 
 		// schedule an animation that does something vaguely interesting
-		animTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { timer in
+		animTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] timer in
 			// do something exciting with our image
-			self.imageView.transform = CGAffineTransform.identity
+			self?.imageView?.transform = CGAffineTransform.identity
 
 			UIView.animate(withDuration: 3) {
-				self.imageView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+				self?.imageView?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
 			}
 		}
 	}
@@ -48,8 +49,9 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		title = image.replacingOccurrences(of: "-Large.jpg", with: "")
-		let original = UIImage(named: image)!
+		title = image?.replacingOccurrences(of: "-Large.jpg", with: "")
+        let path = Bundle.main.path(forResource: image, ofType: nil)!
+		let original = UIImage(contentsOfFile: path)!
 
 		let renderer = UIGraphicsImageRenderer(size: original.size)
 
@@ -60,27 +62,33 @@ class ImageViewController: UIViewController {
 			original.draw(at: CGPoint.zero)
 		}
 
-		imageView.image = rounded
+		imageView?.image = rounded
     }
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
-		imageView.alpha = 0
+		imageView?.alpha = 0
 
 		UIView.animate(withDuration: 3) { [unowned self] in
-			self.imageView.alpha = 1
+			self.imageView?.alpha = 1
 		}
 	}
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        animTimer?.invalidate()
+    }
 
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let safeImage = image else { return }
 		let defaults = UserDefaults.standard
-		var currentVal = defaults.integer(forKey: image)
+		var currentVal = defaults.integer(forKey: safeImage)
 		currentVal += 1
 
-		defaults.set(currentVal, forKey:image)
+		defaults.set(currentVal, forKey: safeImage)
 
 		// tell the parent view controller that it should refresh its table counters when we go back
-		owner.dirty = true
+		owner?.dirty = true
 	}
 }

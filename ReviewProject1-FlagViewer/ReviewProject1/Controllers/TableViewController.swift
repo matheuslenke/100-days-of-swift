@@ -14,7 +14,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 60.0
+        tableView.rowHeight = 90.0
+        
         
         title = "Flags Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -44,8 +45,8 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Flag", for: indexPath)
         
         cell.textLabel?.text = countries[indexPath.row]
-        cell.imageView?.image =  UIImage(named: countries[indexPath.row])
-        cell.imageView?.contentScaleFactor = 0.5
+        cell.imageView?.image = imageWithImage(UIImage(named: countries[indexPath.row])!, scaledToSize: CGSize(width: 100, height: 70))
+        
         return cell
     }
     
@@ -55,6 +56,15 @@ class TableViewController: UITableViewController {
             vc.selectedTitle = "\(countries[indexPath.row])"
             navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    func imageWithImage(_ image: UIImage, scaledToSize newSize: CGSize) -> UIImage {
+        
+        UIGraphicsBeginImageContext(newSize)
+        image.draw(in: CGRect(x: 0 ,y: 0 ,width: newSize.width ,height: newSize.height))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!.withRenderingMode(.alwaysOriginal)
     }
 
 }

@@ -160,3 +160,5 @@ The - represents a 10pt spacing
 **Day 96** Today i made a challenge in my last SpriteKit Game, i made a wind modifier, tracked player score, used Scene transitions and used auto layout for the UI components. The final version remind me a little of Gunbound
 
 **Day 97** Today i made no app, but learned how to use Instruments to debug performance issues in my code, looking at unnecessary allocations and other stuff like rendering big images in really small places, that costs a lot to iOS to move between all those pixels
+
+**Day 98** Today was a hard day, i did a lot of optimizations. I choose in challenge 2 to make an optimization in project 10, flag viewer. I changed how the UIImage was loaded to contentsOfFile, so it doesn't hold a reference everytime and keep making new allocations. It was a memory optimization, but it has a tradeoff that is lose cache, but i was good to see in Instruments the difference in memory allocations

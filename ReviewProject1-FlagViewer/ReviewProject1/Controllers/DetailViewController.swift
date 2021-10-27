@@ -20,7 +20,8 @@ class DetailViewController: UIViewController {
       navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
 
         if let imageToLoad = selectedImage {
-            imageView.image = UIImage(named: imageToLoad)
+            guard let path = Bundle.main.path(forResource: imageToLoad, ofType: nil) else { fatalError("Couldn't get Path") }
+            imageView.image = UIImage(contentsOfFile: path)
             
         }
     }
